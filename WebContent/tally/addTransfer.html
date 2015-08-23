@@ -1,0 +1,70 @@
+<div class="add-tally-success alert alert-success">
+	<h1>Congratulations !</h1>
+	<h4>The new Spend Record has been added successfully.</h4>
+	<h4 id="transfer-success-h4">
+		<span>Transfer from : </span><img id="tfout-icon-success" class="img-rounded select-img" height="18px"><strong id="tfout-name-success"></strong> , 
+		<span>Transfer to : </span><img id="tfin-icon-success" class="img-rounded select-img" height="18px"><strong id="tfin-name-success"></strong>
+	</h4>
+	<button class="btn btn-primary back-to-add-transfer">Back</button>
+</div>
+<div class="add-tally-fail alert alert-danger">
+	<h1>Sorry !</h1>
+	<h4>Some error has happened, failed to add the new Spend Record.</h4>
+	<button class="btn btn-primary back-to-add-transfer">Back</button>
+</div>
+<table class="table add-tally-table">
+	<tbody>
+		<tr>
+			<td>Transfer out Account</td>
+			<td>
+				<div class="btn-group" id="choose-out-account">
+						<button type="button" class="btn btn-danger choosed-item" >
+							<img class="img-rounded select-img" height="18px">
+							<span>Select an Account</span>	
+						</button>
+						<input id="transfer-tfout" type="hidden" value="1"/>
+						<button type="button" class="btn btn-danger  dropdown-toggle" data-toggle="dropdown">
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+						    <li class="divider"></li>
+						    <li><a href="javascript:void(0)" onclick="addAccount()">Add new Account</a></li>
+						</ul>
+					</div>
+			</td>
+			<td>Transfer in Account</td>
+			<td>
+				<div class="btn-group" id="choose-in-account">
+					<button type="button" class="btn btn-warning choosed-item" >
+						<img class="img-rounded select-img" height="18px">
+						<span>Select an Account</span>	
+					</button>
+					<input id="transfer-tfin" type="hidden" value="1"/>
+					<button type="button" class="btn btn-warning  dropdown-toggle" data-toggle="dropdown">
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+					    <li class="divider"></li>
+					    <li><a href="javascript:void(0)" onclick="addAccount()">Add new Account</a></li>
+					</ul>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>Money</td>
+			<td>
+				<div class="form-group ">
+					<input id="transfer-money" type="text" class="inputs form-control" >
+				</div>
+			</td>
+			<td>Time</td>
+			<td><input id="transfer-time" type="text" readonly class="inputs form_datetime form-control"></td>
+		</tr>
+		<tr>
+			<td>Remark</td>
+			<td><input id="transfer-remark" type="text" class="inputs form-control" ></td>		
+			<td colspan="2"><button id="add-transfer-submit" class="btn btn-primary btn-xs tally-add-btn">Add</button></td>
+		</tr>
+	</tbody>
+</table>
+<script src="public/js/tally/addTransfer.js"></script>

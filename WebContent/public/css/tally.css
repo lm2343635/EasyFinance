@@ -1,0 +1,270 @@
+.showInfo
+{
+	display: none;
+	margin: 5px;
+	height: 210px;
+}
+
+#add-record
+{
+	height: 260px;
+	background: rgb(250,250,250);
+	border: 1px rgb(200,200,200) solid;
+	border-radius:10px;
+	opacity:0.95;
+	position: relative;
+	z-index: 10;
+}
+
+.nav-pills
+{
+	margin: 5px;
+}
+
+.info-right
+{
+	height: 205px;
+	float: right;
+	margin-top: 5px;
+}
+
+.info-left
+{
+	height: 205px;
+	float: left;
+}
+
+.record-photo
+{
+	height: 205px;
+	margin-bottom: 3px;
+	padding: 2px;
+}
+
+.record-photo img
+{
+	height: 200px;
+	cursor: pointer;
+}
+
+#upload-record-photo
+{
+	height: 32px;
+	width: 200px;
+}
+
+.inputs
+{
+	width: 200px;
+}
+
+#tally-list
+{
+	margin-top: 10px;
+	margin-bottom:0;
+	opacity:0.95;
+}
+
+#tally-list .panel-heading img 
+{
+	margin-top: -10px;
+}
+
+#add-display
+{
+	float: right;
+	cursor: pointer;
+	margin: 15px;
+}
+
+#select-month
+{
+	float: left;
+	width: 170px;
+	height:100%;
+	overflow:auto;
+	margin-right: 6px;
+	margin-top: -14px;
+}
+
+
+#select-month .panel-body a
+{
+	padding: 4px;
+}
+
+#day-list
+{
+	float: left;
+	width: 800px;
+	height: 100%;
+	margin-top: -14px;
+}
+
+#day-list .panel-heading h3
+{
+	margin:0;
+	padding: 8px;
+}
+
+#day-list .panel-heading span
+{
+	margin-top: 15px;
+	margin-right: 10px;
+}
+
+.list-group
+{
+	padding: 0;
+}
+
+.td-time
+{
+	width: 40px;
+}
+
+.td-classification
+{
+	width: 130px;
+}
+
+.td-photo
+{
+	width: 30px;
+}
+
+.td-money
+{
+	width: 100px;
+}
+
+.td-account
+{
+	width: 120px;
+}
+
+.td-shop
+{
+	width: 120px;
+}
+
+.td-remark
+{
+	width: 120px;
+}
+
+#day-list .panel-heading
+{
+	padding: 0;
+}
+
+#day-list .panel-heading table
+{
+	margin: 0;
+}
+
+.spend-data,.earn-data
+{
+	float: right;
+	margin-left: 10px;
+}
+
+#record-year
+{
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+.glyphicon-chevron-left:hover,.glyphicon-chevron-right:hover
+{
+	cursor: pointer;
+	color: #555555;
+}
+
+.add-record-sign
+{
+	margin-right: 5px;
+}
+
+#add-record-nav
+{
+	float: left;
+}
+
+#add-record-top
+{
+	width: 100%;
+	height: 40px;
+}
+
+.add-tally-input .choosed-item
+{
+	width: 166px;
+}
+
+#choose-spend-template .choosed-item,#choose-earn-template .choosed-item
+{
+	width: 174px;
+}
+
+.tally-add-btn
+{
+	width:300px;
+	height: 35px;
+}
+
+.form-group
+{
+	margin: 0;
+}
+
+.add-tally-success,.add-tally-fail
+{
+	display: none;
+	height: 100%;
+	margin: 0;
+}
+
+#transfer-success-h4 span,#transfer-success-h4 img,#transfer-success-h4 strong
+{
+	float: left;
+}
+
+#tally-list-type
+{
+	margin-top: -5px;
+	float: right;
+}
+
+#upload-record-photo-tip
+{
+	margin-top: 7px;
+}
+
+#upload-record-photo-progress
+{
+	margin: 10px 0;
+}
+
+#uploaded-record-photo-panel,#back-to-upload,#modal-body-choose
+{
+	display: none;
+}
+
+.record-photo-thumbnail
+{
+	height: 50px;
+	width: 50px;
+	cursor:  pointer;
+}
+
+#record-list tbody tr td
+{
+	vertical-align: middle;
+}
+
+#record-list tbody tr .td-photo
+{
+	padding: 2px;
+	padding-left: 10px;
+}

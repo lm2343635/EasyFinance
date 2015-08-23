@@ -1,0 +1,85 @@
+<link rel="stylesheet" href="public/css/setting.css">	
+<script src="public/js/setting/setting.js"></script>
+
+<div class="list-group" id="set-list-group">
+	<div class="alert alert-info" style="margin-top: 0;">System Setting</div>
+	<a href="#" class="list-group-item active"><img src="public/images/user-center.png">User</a>
+	<a href="#" class="list-group-item"><img src="public/images/security.png">Security</a>
+	<div class="alert alert-info">Account Setting</div>
+	<a href="#" class="list-group-item"><img src="public/images/classification.png">Classification</a>
+	<a href="#" class="list-group-item"><img src="public/images/account.png">Account</a>
+	<a href="#" class="list-group-item"><img src="public/images/shop.png">Shop</a>
+	<a href="#" class="list-group-item"><img src="public/images/template.png">Template</a>
+	<a href="#" class="list-group-item"><img src="public/images/accoutBook.png">Account Books</a>
+	<button class="btn btn-warning btn-lg" id="clear-data" data-toggle="modal" data-target="#clear-data-modal">
+		<img src="public/images/clear-data.png">
+	    <h4 class="panel-title">Clear Data</h4>
+	</button>
+</div>
+<div id="set-content">
+	<div class="showInfo"></div>
+	<div class="showInfo"></div>
+	<div class="panel panel-success showInfo"></div>
+	<div class="panel panel-danger showInfo"></div>
+	<div class="panel panel-warning showInfo"></div>
+	<div class="panel panel-primary showInfo"></div>
+	<div class="panel panel-warning showInfo"></div>
+</div>
+
+<div class="modal fade" id="clear-data-modal" tabindex="-1" >
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header modal-header-warning">
+				<button type="button" class="close" data-dismiss="modal" >&times;</button>
+				<h4 class="modal-title" >Clear Data</h4>
+			</div>
+			<div class="modal-body">
+				<h2 class="text-danger">Are you sure to clear all data?</h2>
+				<p class="text-warning">Clear data will delete all records and settings. But you can retain some settings.</p>
+				<h4 class="text-warning">First input your password to confirm :</h4>	
+				<div class="input-group">
+					<span class="input-group-addon"><span>Password</span></span>
+					<input type="password" class="form-control" placeholder="Please input your password to confirm.">
+				</div>
+				<h4 class="text-warning">Now, let us choose some settings you want to retain :</h4>	
+				<table class="table table-condensed">
+					<tbody>
+						<tr>
+							<td><h4>Retain the setting of Classification :</h4></td>
+							<td><input type="checkbox" class="switch" checked></td>
+						</tr>
+						<tr>
+							<td><h4>Retain the setting of Classification :</h4></td>
+							<td><input type="checkbox" class="switch" checked></td>
+						</tr>
+						<tr>
+							<td><h4>Retain the setting of Account :</h4></td>
+							<td><input type="checkbox" class="switch" checked></td>
+						</tr>
+						<tr>
+							<td><h4>Retain the setting of Shop :</h4></td>
+							<td><input type="checkbox" class="switch" checked></td>
+						</tr>
+						<tr>
+							<td><h4>Retain the setting of Template :</h4></td>
+							<td><input type="checkbox" class="switch" checked></td>
+						</tr>
+						<tr>
+							<td><h4>Retain the setting of Account Books :</h4></td>
+							<td><input type="checkbox" class="switch" checked></td>
+						</tr>
+						<tr>
+							<td><h4>Clear all data and settings :</h4></td>
+							<td><input type="checkbox" class="switch" checked></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-info pull-left">Upload my own icon</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save</button>
+			</div>
+		</div>
+	</div>
+</div>

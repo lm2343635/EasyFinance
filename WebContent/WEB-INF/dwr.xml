@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC 
+	"-//GetAhead Limited//DTD Direct Web Remoting 3.0//EN"
+	"http://getahead.org/dwr/dwr30.dtd">
+<dwr>
+	<allow>
+		<create creator="spring" javascript="UserManager"> 
+			<param name="beanName" value="userManager"/>
+		</create>
+		<create creator="spring" javascript="TallyManager"> 
+			<param name="beanName" value="tallyManager"/>
+		</create>
+		<create creator="spring" javascript="SetManager"> 
+			<param name="beanName" value="setManager"/>
+		</create>
+		<create creator="spring" javascript="ClassificationManager"> 
+			<param name="beanName" value="classificationManager"/>
+		</create>
+		<create creator="spring" javascript="AccountBookManager"> 
+			<param name="beanName" value="accountBookManager"/>
+		</create>
+		<create creator="spring" javascript="AccountManager"> 
+			<param name="beanName" value="accountManager"/>
+		</create>
+		<create creator="spring" javascript="AccountHistoryManager"> 
+			<param name="beanName" value="accountHistoryManager"/>
+		</create>
+		<create creator="spring" javascript="ShopManager"> 
+			<param name="beanName" value="shopManager"/>
+		</create>		
+		<create creator="spring" javascript="TemplateManager"> 
+			<param name="beanName" value="templateManager"/>
+		</create>	
+		<create creator="spring" javascript="ReportManager"> 
+			<param name="beanName" value="reportManager"/>
+		</create>	 
+		<create creator="spring" javascript="ExchangeRateManager"> 
+			<param name="beanName" value="exchangeRateManager"/>
+		</create>	 
+		<create creator="spring" javascript="PhotoManager"> 
+			<param name="beanName" value="photoManager"/>
+		</create>	
+				
+		<!-- 定义使用Bean转换器处理如下Java类 -->
+		<convert converter="bean" match="edu.kit.ActMgr.domain.Account"/>
+		<convert converter="bean" match="edu.kit.ActMgr.domain.AccountBook"/>
+		<convert converter="bean" match="edu.kit.ActMgr.domain.Classification"/>
+		<convert converter="bean" match="edu.kit.ActMgr.domain.Icon"/>
+		<convert converter="bean" match="edu.kit.ActMgr.domain.Photo"/>
+		<convert converter="bean" match="edu.kit.ActMgr.domain.Record"/>
+		<convert converter="bean" match="edu.kit.ActMgr.domain.Shop"/>
+		<convert converter="bean" match="edu.kit.ActMgr.domain.Template"/>
+		<convert converter="bean" match="edu.kit.ActMgr.domain.Transfer"/>
+		<convert converter="bean" match="edu.kit.ActMgr.domain.User"/>
+		<convert converter="bean" match="edu.kit.ActMgr.domain.AccountHistory"/>
+		
+		<convert converter="bean" match="edu.kit.ActMgr.bean.UserBean"/>
+		<convert converter="bean" match="edu.kit.ActMgr.bean.IconBean"/>
+		<convert converter="bean" match="edu.kit.ActMgr.bean.AccountBookBean"/>
+		<convert converter="bean" match="edu.kit.ActMgr.bean.AccountBean"/>
+		<convert converter="bean" match="edu.kit.ActMgr.bean.ClassificationBean"/>
+		<convert converter="bean" match="edu.kit.ActMgr.bean.ShopBean"/>
+		<convert converter="bean" match="edu.kit.ActMgr.bean.PhotoBean"/>
+		<convert converter="bean" match="edu.kit.ActMgr.bean.TransferBean"/>
+		<convert converter="bean" match="edu.kit.ActMgr.bean.RecordBean"/>
+		<convert converter="bean" match="edu.kit.ActMgr.bean.TemplateBean"/>
+		<convert converter="bean" match="edu.kit.ActMgr.bean.AccountHistoryBean"/>
+		<convert converter="bean" match="edu.kit.ActMgr.bean.SynchronizationHistoryBean"/>
+		
+		<convert converter="bean" match="edu.kit.ActMgr.data.DateRecord"/>
+		<convert converter="bean" match="edu.kit.ActMgr.data.DateTransfer"/>
+		<convert converter="bean" match="edu.kit.ActMgr.data.TallyListTime"/>
+		<convert converter="bean" match="edu.kit.ActMgr.data.EarnSpendReportData"/>
+		<convert converter="bean" match="edu.kit.ActMgr.data.ProportionReportData"/>
+		<convert converter="bean" match="edu.kit.ActMgr.data.AssetsReportData"/>
+		<convert converter="bean" match="edu.kit.ActMgr.data.RateHistory"/>
+	</allow>
+</dwr>

@@ -1,0 +1,88 @@
+<nav class="navbar navbar-default" >
+	<div class="navbar-header">
+		<a class="navbar-brand" href="javascript:void(0)" onclick="showAllRecord()">Show All</a>
+	</div>
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		<ul class="nav navbar-nav">
+			<li class="dropdown" id="show-type-classification">
+				<a href="#" class="active dropdown-toggle" data-toggle="dropdown">
+					<img class="img-rounded select-img" height="18px">
+					<span>All Classification</span> 
+					<b class="caret"></b>
+				</a>
+				<input id="cid" type="hidden" value="-1">
+				<ul class="dropdown-menu">
+					<li class="divider"></li>
+					<li><a href="javascript:void(0)" onclick="chooseShowTypeClassification(-1)">All Classification</a></li>
+					<li><a href="javascript:void(0)">Add New Classification</a></li>
+				</ul>
+			</li>
+			<li class="dropdown" id="show-type-account">
+				<a href="#" class="active dropdown-toggle" data-toggle="dropdown">
+					<img class="img-rounded select-img" height="18px">
+					<span>All Account</span>
+					<b class="caret"></b>
+				</a>
+				<input id="aid" type="hidden" value="-1">
+				<ul class="dropdown-menu">
+					<li class="divider"></li>
+					<li><a href="javascript:void(0)" onclick="chooseShowTypeAccount(-1)">All Account</a></li>
+					<li><a href="javascript:void(0)">Add New Account</a></li>
+				</ul>
+			</li>
+			<li class="dropdown" id="show-type-shop">
+				<a href="#" class="active dropdown-toggle" data-toggle="dropdown">
+					<img class="img-rounded select-img" height="18px">
+					<span>All Shop</span>
+					<b class="caret"></b>
+				</a>
+				<input id="sid" type="hidden" value="-1">
+				<ul class="dropdown-menu">
+					<li class="divider"></li>
+					<li><a href="javascript:void(0)" onclick="chooseShowTypeShop(-1)">All Shop</a></li>
+					<li><a href="javascript:void(0)">Add New Shop</a></li>
+				</ul>
+			</li>
+		</ul>
+		<form class="navbar-form navbar-left" onsubmit="return searchRemark();">
+			<div class="form-group">
+				<input id="remark" type="text" class="form-control" placeholder="Search Remark">
+			</div>
+			<button type="submit" class="btn btn-success" >Submit</button>
+		</form>
+	</div>
+</nav>
+<div id="list-content">
+	<div class="panel panel-info text-center" id="select-month">
+		<div class="panel-heading ">
+			<span id="record-last-year" class="glyphicon glyphicon-chevron-left"></span>
+			<span id="record-year"></span>
+			<span id="record-next-year" class="glyphicon glyphicon-chevron-right"></span>
+		</div>
+		<div class="panel-body list-group" id="record-months"></div>
+		<input id="year" type="hidden">
+		<input id="month" type="hidden">
+	</div>
+	<div class="panel panel-warning" id="day-list">
+		<div class="panel-heading ">
+				<h3 id="record-showing-month"></h3>
+				<span class="earn-data text-success"> Earn : $<span id="record-earn"></span> </span>
+				<span class="spend-data text-danger"> Spend : $<span id="record-spend"></span> </span>					
+		</div>
+		<table class="table table-bordered" id="record-list">
+			<thead>
+				<tr class=success>
+					<th class="td-time">Time</th>
+					<th class="td-classification">Classification</th>				
+					<th class="td-account">Account</th>
+					<th class="td-shop">Shop</th>
+					<th class="td-money">Money</th>
+					<th class="td-remark">Remark</th>
+					<th class="td-photo">Photo</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>					
+	</div>
+</div>
+<script src="public/js/tally/record.js"></script>

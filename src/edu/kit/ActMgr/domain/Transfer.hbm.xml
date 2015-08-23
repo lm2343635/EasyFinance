@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="edu.kit.ActMgr.domain">
+	<class name="Transfer" table="transfer">
+		<id name="tfid" type="integer" column="tfid">
+			<generator class="identity"/>
+		</id>
+		<many-to-one name="tfout" class="Account" column="tfout" not-null="true" lazy="false"/>
+		<many-to-one name="tfin" class="Account" column="tfin" not-null="true" lazy="false"/>
+		<property name="money" column="money" not-null="true" type="double" />
+		<property name="time" column="time" not-null="true" type="java.util.Date" />
+		<property name="remark" column="remark" type="string" />
+		<many-to-one name="accountBook" class="AccountBook" column="abid" not-null="true" lazy="false"/>
+		<property name="sync" column="sync" type="integer" not-null="true"/>
+	</class>
+</hibernate-mapping>

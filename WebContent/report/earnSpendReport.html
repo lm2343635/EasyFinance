@@ -1,0 +1,112 @@
+<div class="panel-heading">
+	<span class="show-title">Earn Report</span>
+	<ul class="pagination" id="choose-show-type">
+		 <li class="active stats-chart-column-li">
+			 <a href="javascript:void(0)" title="Show as Chart" onclick="changeShowType('stats-chart-column')">
+			 	<span class="glyphicon glyphicon-stats" ></span>
+			 </a>
+		 </li>
+		 <li class="stats-table-li">
+			 <a href="javascript:void(0)" title="Show as Table" onclick="changeShowType('stats-table')">
+				 <span class="glyphicon glyphicon-list-alt"></span>
+			 </a>
+		 </li>
+	</ul>
+</div>
+<div class="panel-body">
+	<nav class="navbar navbar-default">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="javascript:void(0)">Show All</a>
+		</div>
+		<div class="collapse navbar-collapse" >
+			<ul class="nav navbar-nav">
+				<li class="dropdown" id="select-classification">
+					<a href="#" class="active dropdown-toggle" data-toggle="dropdown">All Classification <b class="caret"></b></a>
+					<input type="hidden" id="cid">
+					<ul class="dropdown-menu">
+						<li class="divider"></li>
+						<li><a href="#">Add New Classification</a></li>
+					</ul>
+				</li>
+				<li class="dropdown" id="select-account">
+					<a href="#" class="active dropdown-toggle" data-toggle="dropdown">All Account <b class="caret"></b></a>
+					<input type="hidden" id="aid">
+					<ul class="dropdown-menu">
+						<li class="divider"></li>
+						<li><a href="#">Add New Account</a></li>
+					</ul>
+				</li>
+				<li class="dropdown" id="select-shop">
+					<a href="#" class="active dropdown-toggle" data-toggle="dropdown">All Shop<b class="caret"></b></a>
+					<input type="hidden" id="sid">
+					<ul class="dropdown-menu">
+						<li class="divider"></li>
+						<li><a href="#">Add New Shop</a></li>
+					</ul>
+				</li>
+				<li class="dropdown"  id="choose-type">
+					<a href="#" class="active dropdown-toggle" data-toggle="dropdown"><span>By Day</span><b class="caret"></b></a>
+					<input type="hidden" id="type" value="0">
+					<ul class="dropdown-menu">
+						<li><a href="javascript:void(0)" onclick="changeType(0,'earn-start-time','earn-end-time')">By Day</a></li>
+						<li><a href="javascript:void(0)" onclick="changeType(1,'earn-start-time','earn-end-time')">By Month</a></li>
+						<li><a href="javascript:void(0)" onclick="changeType(2,'earn-start-time','earn-end-time')">By Year</a></li>
+					</ul>
+				</li>
+			</ul>	
+		</div>
+	</nav>
+	<div class="stats-chart-column" id="earn-report-graphics"></div>
+	<div class="stats-table panel panel-success stats-hide">
+		<div class="panel-heading">Monthly Earn</div>
+		<table class="table table-hover" id="earn-report-table">
+			<thead>
+				<tr>
+					<th>Time</th>
+					<th>Spend</th>
+					<th>Earn</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</div>
+	<div class="alert alert-success">
+		<span class="select-time">Select Time : </span>
+		<span class="select-time">Form</span>
+		<span class="start-time">
+			<input id="earn-start-time" type="text" readonly class="inputs form_datetime form-control select-time earn-select-time"  placeholder="Start Time">
+		</span>
+		<span class="select-time">To</span>
+		<span class="end-time">
+			<input id="earn-end-time" type="text" readonly class="inputs form_datetime form-control select-time earn-select-time"  placeholder="End Time">
+		</span>
+		<span id="unlawful-data-year" style="display: none;">
+			<span class="glyphicon glyphicon-remove text-danger" 
+				data-toggle="popover" data-placement="right" 
+				data-content="The start time and end time is unlawful. If you want to show by year, be sure the start year is before the end yaer." data-original-title="Unlawful Data">
+			</span>
+		</span>
+		<span id="unlawful-data-month" style="display: none;">
+			<span class="glyphicon glyphicon-remove text-danger" 
+				data-toggle="popover" data-placement="right" 
+				data-content="The start time and end time is unlawful. If you want to show by month be sure to choose the same year and the start month is 
+				before the end month. " data-original-title="Unlawful Data">
+			</span>
+		</span>
+		<span id="unlawful-data-date" style="display: none;">
+			<span class="glyphicon glyphicon-remove text-danger" 
+				data-toggle="popover" data-placement="right" 
+				data-content="The start time and end time is unlawful. If you want to show by date, be sure to choose the same month, and 
+				the start date is before the end date." data-original-title="Unlawful Data">
+			</span>
+		</span>
+		<span id="time-empty" style="display: none;">
+			<span class="glyphicon glyphicon-remove text-danger" 
+				data-toggle="popover" data-placement="right" 
+				data-content="Select start time and end time! " data-original-title="">
+			</span>
+		</span>
+		<button class="btn btn-primary select-time-sbt" id="earn-report-sbt">Submit</button>
+	</div>
+</div>
+<script src="public/js/report/earnSpendReport.js"></script>

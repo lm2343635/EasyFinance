@@ -1,0 +1,147 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, p, img 
+{
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	background: url(../images/body-bg.jpg) repeat;
+}
+
+#header 
+{
+	height: 112px;
+	background: url(../images//header_bg.gif) 0 32px repeat-x;
+}
+
+#header-menu 
+{
+	height: 32px;
+	background: #373737;
+}
+
+#header-menu-container 
+{
+	width: 1008px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#header-menu-ul 
+{
+	float: right;
+	color: #AAA;
+	padding-right: 5px;
+}
+
+ol, ul, li 
+{
+	list-style: none;
+}
+
+#header-menu-ul li 
+{
+	float: left;
+	color: #AAA;
+	display: block;
+	line-height: 30px;
+	margin-left: 15px;
+}
+
+#header-menu-ul li a 
+{
+	color: #fff;
+}
+
+#header-container 
+{
+	width: 1008px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#logo 
+{
+	width: 194px;
+	float: left;
+}
+
+#logo  a img
+{
+	height: 75px;
+}
+
+#navigation
+{
+	margin-top: 15px;	
+}
+
+#navigation li 
+{
+	display: block;
+	height: 34px;
+	margin-left: 30px;
+	float: left;
+}
+
+#navigation li a
+{
+	text-decoration: none;
+	color: white;
+	font-family: "Microsoft YaHei";
+	font-weight: bold;
+	font-size: 25px;
+}
+
+#navigation li a:hover
+{
+	color: #eeeeee;
+}
+
+#header, #bg1, #bg2 
+{
+	min-width: 1008px;
+}
+
+#bg1 
+{
+	text-align: center;
+	background: url(../images/bg-top.jpg) 0 0 repeat-x;
+}
+
+#bg1 #bg1-c 
+{
+	height: 233px;
+	background: url(../images/c-top.jpg) center no-repeat;
+}
+
+#bg2 
+{
+	background: url(../images/bg2.jpg) 0 0 repeat-x;
+	height: 105px;
+}
+
+.show
+{
+	display: block;
+}
+
+#mainContent
+{
+	margin: -315px auto 0 auto;
+	width: 1008px;
+}
+
+.select-img
+{
+	margin-right: 5px;
+}
+
+#circle-user-photo
+{
+	width: 25px;
+	height: 25px;
+	margin: 4px;
+	cursor: pointer;
+}

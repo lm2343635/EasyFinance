@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="edu.kit.ActMgr.domain">
+	<class name="Photo" table="photo">
+		<id name="pid" type="integer" column="pid">
+			<generator class="identity"/>
+		</id>
+		<property name="filename" column="filename" type="string" not-null="true" unique="true"></property>
+		<property name="pname" column="pname" type="string" not-null="true"></property>
+		<property name="upload" column="upload" type="java.util.Date" not-null="true"></property>
+		<many-to-one name="accountBook" cascade="all" class="AccountBook" column="abid" not-null="true" lazy="false"/>
+		<property name="sync" column="sync" type="integer" not-null="true"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="edu.kit.ActMgr.domain">
+	<class name="Classification" table="classification">
+		<id name="cid" type="integer" column="cid">
+			<generator class="identity"/>
+		</id>
+		<property name="cname" column="cname" type="string" not-null="true" length="50" />
+		<property name="cin" column="cin" type="double"/>
+		<property name="cout" column="cout" type="double"/>
+		<many-to-one name="cicon" class="Icon" column="iid" lazy="false"/>
+		<many-to-one name="accountBook" class="AccountBook" column="abid" not-null="true" lazy="false"/>
+		<property name="sync" column="sync" type="integer" not-null="true"/>
+	</class>
+</hibernate-mapping>

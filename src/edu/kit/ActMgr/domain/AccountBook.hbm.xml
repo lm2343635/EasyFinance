@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="edu.kit.ActMgr.domain">
+	<class name="AccountBook" table="accountbook">
+		<id name="abid" type="integer" column="abid">
+			<generator class="identity"/>
+		</id>
+		<property name="abname" column="abname" type="string" not-null="true" length="50"/>
+		<many-to-one name="abicon" class="Icon" column="iid" lazy="false"/>
+		<set name="classifications" cascade="all" inverse="true">
+			<key column="abid"/>
+			<one-to-many class="Classification"/>
+		</set>
+		<set name="shops" cascade="all" inverse="true">
+			<key column="abid" not-null="true"></key>
+			<one-to-many class="Shop"/>
+		</set>
+		<set name="accounts" cascade="all" inverse="true">
+			<key column="abid" not-null="true"></key>
+			<one-to-many class="Account"/>
+		</set>
+		<set name="templates" cascade="all" inverse="true">
+			<key column="abid" not-null="true"></key>
+			<one-to-many class="Template"/>
+		</set>
+		<list name="records" cascade="all" inverse="true">
+			<key column="abid" not-null="true"/>
+			<index column="time" type="java.util.Date"></index>
+			<one-to-many class="Record"/>
+		</list>
+		<list name="transfers" cascade="all" inverse="true">
+			<key column="abid" not-null="true"/>
+			<index column="time" type="java.util.Date"></index>
+			<one-to-many class="Transfer"/>
+		</list>
+		<many-to-one name="user" class="User" column="uid" not-null="true"/>
+		<property name="sync" column="sync" type="integer" not-null="true"/>
+	</class>
+</hibernate-mapping>

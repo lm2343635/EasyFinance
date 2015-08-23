@@ -1,0 +1,129 @@
+<div class="panel-heading">
+	<span class="show-title">Account</span>
+	<button class="btn btn-warning btn-xs add-modal-btn" id="add-account-btn" data-toggle="modal" data-target="#add-account">
+		<span class="glyphicon glyphicon-plus"></span>
+	</button>
+</div>
+<div class="panel-body">
+	<table class="table table-hover set-table" id="account-table">
+		<thead>
+			<tr>
+				<th>Icon</th>
+				<th>Account Name</th>
+				<th>Total Inflows</th>
+				<th>Total Outflows</th>
+				<th>Surplus</th>
+				<th>Delete</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+</div>
+
+<div class="modal fade add-modal" id="add-account" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header modal-header-pink">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Add New Account</h4>
+			</div>
+			<div class="modal-body add-success" style="display: none;">
+				<h2 class="text-success">Congratulation!</h2>
+				<p> The new Account <span></span> have been added successfully.</p>
+				<button class="btn btn-primary">Back</button>
+				<button class="btn btn-default pull-right" data-dismiss="modal">Close</button>
+			</div>
+			<div class="modal-body add-form">
+				<div class="input-group" style="margin-bottom: 5px;">
+					<span class="input-group-addon"><span>Account Name</span></span>
+					<input id="aname" type="text" class="form-control" placeholder="Please input your new account name.">
+					<span class="input-group-addon" id="add-account-wrong" style="display: none;">
+						<span class="glyphicon glyphicon-remove text-danger" 
+							data-toggle="popover" data-placement="left" 
+							data-content="Be sure to input all and choose a icon for it ! " data-original-title="">
+						</span>
+					</span>
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon"><span>Account Assets</span></span>
+					<input id="asset" type="text" class="form-control" placeholder="Please input your account assets.">
+					<span class="input-group-addon" id="asset-not-number" style="display: none;">
+						<span class="glyphicon glyphicon-remove text-danger" 
+							data-toggle="popover" data-placement="left" 
+							data-content="Be sure to input a number! " data-original-title="">
+						</span>
+					</span>	
+				</div>		
+				<input id="iid" type="hidden"/>
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#offical-account-icons" data-toggle="tab">The offical icons : </a></li>
+					<li><a href="#own-account-icons" data-toggle="tab">Your own icons : </a></li>
+					<li><a href="#friends-account-icons" data-toggle="tab">Friends' icons : </a></li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane active" id="offical-account-icons">
+						<table class="table" id="offical-account-icons-table">
+							<tbody>
+								<tr>
+								</tr>
+							</tbody>
+						</table>
+						<div class="page-select">
+							<ul class="pagination pull-right" id="offical-account-icons-ul"></ul>			
+						</div>
+					</div>
+					<div class="tab-pane" id="friends-account-icons">
+						<table class="table">
+							<tbody>
+								<tr>
+
+								</tr>
+							</tbody>
+						</table>
+						<div class="page-select">
+							<ul class="pagination pull-right">
+								<li><a href="#">&laquo;</a></li>
+								<li class="active"><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+								<li><a href="#">&raquo;</a></li>
+							</ul>			
+						</div>
+					</div>	
+					<div class="tab-pane" id="own-account-icons">
+						<table class="table">
+							<tbody>
+								<tr>
+
+								</tr>
+							</tbody>
+						</table>
+						<div class="page-select">
+							<ul class="pagination pull-right">
+								<li><a href="#">&laquo;</a></li>
+								<li class="active"><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+								<li><a href="#">&raquo;</a></li>
+							</ul>			
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="alert alert-warning alert-dismissable add-fail" style="display: none;">
+				<button type="button" class="close" data-dismiss="alert">&times;</button>
+				<strong>Sorry!</strong> Failed to add new Account.
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-info pull-left">Upload my own icon</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button id="add-account-submit" type="button" class="btn btn-primary">Save</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="public/js/setting/accountSetting.js"></script>

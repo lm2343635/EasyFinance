@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="edu.kit.ActMgr.domain">
+	<class name="AccountHistory" table="accounthistory">
+		<id name="ahid" type="integer" column="ahid">
+			<generator class="identity"/>
+		</id>
+		<many-to-one name="account" class="Account" column="aid" not-null="true" lazy="false"/>
+		<property name="date" column="date" type="date" not-null="true"/>
+		<property name="ain" column="ain" type="double" not-null="true"/>
+		<property name="aout" column="aout" type="double" not-null="true"/>
+		<property name="sync" column="sync" type="integer" not-null="true"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="edu.kit.ActMgr.domain">
+	<class name="SynchronizationHistory" table="synchronizationHistory">
+		<id name="shid" type="integer" column="shid">
+			<generator class="identity"/>
+		</id>
+		<property name="time" column="time" type="java.util.Date" not-null="true"/>
+		<property name="ip" column="ip" type="string" not-null="true"/>
+		<property name="device" column="device" type="string" not-null="true"/>	
+		<many-to-one name="user" class="User" cascade="all" column="uid" not-null="true" lazy="false"/>
+	</class>
+</hibernate-mapping>

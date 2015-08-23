@@ -1,0 +1,198 @@
+.list-group
+{
+	width: 240px;
+	float: left;
+	margin-right: 8px;
+}
+
+.showInfo
+{
+	width: 760px;
+	float: left;
+	display: none;
+}
+
+.alert
+{
+	margin-top: 10px;
+	margin-bottom: -2px;
+}
+
+#clear-data
+{
+	margin-top: 15px;
+	cursor: pointer;
+	width: 240px;
+}
+
+#clear-data h4
+{
+	margin-top: 8px;
+}
+
+#set-list-group a img
+{
+	margin-right: 5px;
+}
+
+#uc-info-phto img
+{
+	width: 260px;
+}
+
+.set-table tbody tr td img
+{
+	height: 30px;
+	margin-right: 5px;
+}
+
+
+.add-modal-btn
+{
+	float: right;
+	margin: 0;
+	padding: 0;
+	width: 22px;
+}
+
+.add-modal .modal-dialog .modal-content .modal-body .nav-tabs
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.add-modal .modal-dialog .modal-content .modal-body .tab-pane .page-select .pagination
+{
+	margin: 0;
+	padding-right: 5px;
+}
+
+.add-modal .modal-dialog .modal-content .modal-body .tab-pane table
+{
+	margin-bottom: 0;
+}
+
+.add-modal .modal-dialog .modal-content .modal-body .tab-pane .page-select
+{
+	height: 25px;
+}
+
+#modify-password ul li
+{
+	margin-bottom: 5px;
+}
+
+#modify-password button 
+{
+	width: 100px;
+	margin-left: 5px;	
+}
+
+.table-account-books
+{
+	margin: 0;
+}
+
+.table-account-books tbody tr td
+{
+	height: 269px;
+	width:242px;
+	background-position: center;
+	background-size:98% 99%;
+}
+
+.table-account-books tbody tr td p
+{
+	margin-top: 30px;
+}
+
+.label
+{
+	top: 10px;
+	position: relative;
+	cursor: pointer;
+}
+
+.label:hover
+{
+	background: #66FFFF;
+	color:#006600;
+}
+
+.account-book-seleted
+{
+	margin-left: 80px;
+	margin-top: 50px;
+}
+
+.delete-account-book
+{
+	top: -45px;
+	left: 160px;
+	position: relative;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+.delete-account-book:hover,
+.delete-account-book:focus,
+.delete-account-book:active,
+.modify-account-book:hover,
+.modify-account-book:focus,
+.modify-account-book:active
+{
+	color: #cecece;
+}
+
+.modify-account-book
+{
+	top: -45px;
+	left: 195px;
+	position: relative;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+#uc-info-basic .input-group
+{
+	margin: 6px 0;
+	width: 460px;
+}
+
+#uc-info-basic .input-group .info-name
+{
+	width: 110px;
+}
+
+#uc-info-basic .input-group .info-edit
+{
+	width: 40px;
+}
+
+#uc-info-basic .input-group input
+{
+	background: #ffffff;
+}
+
+.info-edit-enable
+{
+	cursor: pointer;
+	background: #CCFFCC
+}
+
+.info-edit-enable:hover
+{
+	background: #00FF33;
+	color: #444444;
+}
+
+#uc-info-basic .input-group p
+{
+	height: 30px;
+	margin: 0;
+}
+
+#template-table tbody tr td,#classification-table tbody tr td,#shop-table tbody tr td,#account-table tbody tr td
+{
+	line-height: 30px;
+}

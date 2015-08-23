@@ -1,0 +1,118 @@
+<div class="modal fade" id="exchange-rate-modal" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header modal-header-purple" id="exchange-rate-header">
+				<span class="glyphicon glyphicon-remove pull-right" data-dismiss="modal"></span>
+				<span id="chart-full-screen-btn" class="glyphicon glyphicon-resize-full pull-right"></span>
+				<h4 class="modal-title">Search Exchange Rate</h4>
+			</div>
+			<div class="modal-body">
+				<table class="table" id="exchange-rate-chooser">
+					<tr>
+						<td><h4 class="text-success">From </h4></td>
+						<td>
+							<div class="btn-group" id="currency-from">
+								<button type="button" class="btn btn-success btn-180px-width choosed-item">
+									<img class="img-rounded select-img" height="20px" src="public/images/currency/All Currency.png">
+									<span>All Currency</span>	
+								</button>
+								<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+									<span class="caret"></span>
+								</button>
+								<input type="hidden" id="currency-from-val" value="All Currency">
+								<ul class="dropdown-menu" role="menu">
+									<li class="divider"></li>
+									<li>
+										<a href="javascript:void(0)" onclick="chooseCurrencyFrom('All Currency')">
+											<img class="img-rounded select-img" height="20px" src="public/images/currency/All Currency.png"/>All Currency
+										</a>
+									</li>
+								</ul>
+							</div>
+						</td>
+						<td><h4 class="text-info">To</h4></td>
+						<td>
+							<div class="btn-group" id="currency-to">
+								<button type="button" class="btn btn-info btn-180px-width choosed-item">
+									<img class="img-rounded select-img" height="20px" src="public/images/currency/All Currency.png">
+									<span>All Currency</span>	
+								</button>
+								<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+									<span class="caret"></span>
+								</button>
+								<input type="hidden" id="currency-to-val" value="All Currency">
+								<ul class="dropdown-menu" role="menu">
+									<li class="divider"></li>
+									<li>	
+										<a href="javascript:void(0)" onclick="chooseCurrencyTo('All Currency')">
+											<img class="img-rounded select-img" height="20px" src="public/images/currency/All Currency.png"/>All Currency
+										</a>
+									</li>
+								</ul>
+							</div>
+						</td>
+					</tr>
+					<tr id="exchange-rate-tips">
+						<td colspan="4"><h5 class="text-muted">Choose the currency you want to exchange and click Search button.</h5></td>
+					</tr>
+					<tr id="exchange-rate-two-same">
+						<td colspan="4"><h5 class="text-danger">Please choose the different currency!</h5></td>
+					</tr>
+				</table>
+				<table class="table" id="exchange-rate-table">
+					<thead>
+						<tr>
+							<th>From</th>
+							<th>To</th>
+							<th>Exchange Rate</th>
+							<th>Chart</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+					<tfoot>
+						<tr>
+							<td colspan="4">
+								<img id="loading-small" src="public/images/loading_small.gif">
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+				<div id="exchange-rate-chart">
+					<div class="chart">
+						<img id="loading-large" src="public/images/loading_large.gif">
+					</div>
+					<div class="alert alert-warning time-selector">
+						<input type="hidden" id="from">
+						<input type="hidden" id="to">
+						<span class="select-time">Select Time : </span>
+						<span class="select-time">Form</span>
+						<span class="start-time">
+							<input id="exchange-start-time" type="text" readonly class="inputs form_datetime form-control select-time exchange-select-time"  placeholder="Start Time">
+						</span>
+						<span class="select-time">To</span>
+						<span class="end-time">
+							<input id="exchange-end-time" type="text" readonly class="inputs form_datetime form-control select-time exchange-select-time"  placeholder="End Time">
+						</span>
+						<span id="account-time-empty" style="display: none;">
+							<span class="glyphicon glyphicon-remove text-danger" 
+								data-toggle="popover" data-placement="right" 
+								data-content="Select start time and end time! " data-original-title="">
+							</span>
+						</span>
+						<button class="btn btn-rate-history btn-primary" id="exchange-history-sbt">Submit</button>
+						<button class="btn btn-rate-history btn-warning pull-right" id="last-decade-history">Last Decade</button>
+						<button class="btn btn-rate-history btn-info pull-right" id="this-year-history">This Year</button>
+						<button class="btn btn-rate-history btn-success pull-right" id="this-month-history">This Month</button>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-info pull-left" id="exchage-rate-back">Back</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary" id="exchange-rate-sbt">Search</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="public/js/otherFunctions/exchageRate.js"></script>
+<link rel="stylesheet" href="public/css/otherFunctions.css">

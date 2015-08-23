@@ -1,0 +1,82 @@
+.chart
+{
+	cursor: pointer;
+}
+
+.chart:hover
+{
+	color: #cecece;
+}
+
+.time-selector
+{
+	height: 65px;
+}
+
+.time-selector span
+{
+	padding-top: 7px;
+}
+
+#exchange-rate-table,#exchange-rate-back,#exchange-rate-two-same,#exchange-rate-chart
+{
+	display: none;
+}
+
+#exchange-rate-chart .chart
+{
+	height: 400px;;
+	width: 868px;
+}
+
+#loading-large
+{
+	position:relative;
+	top: 150px;
+	left:374px;
+}
+
+.select-time
+{
+	float: left;
+	margin-right: 5px;
+}
+
+.form_datetime
+{
+	width: 150px;
+}
+
+#exchange-rate-table
+{
+	margin-bottom: 0;
+}
+
+#loading-small
+{
+	margin-top: 10px;
+	margin-left: 255px;
+	display: none;
+}
+
+#this-year-history,#this-month-history,#last-decade-history
+{
+	margin-left: 5px;
+}
+
+#chart-full-screen-btn
+{
+	margin-right: 9px;
+	display: none;
+}
+
+#exchange-rate-header span:hover
+{
+	cursor: pointer;
+	color: #CC0099;
+}
+
+.chart-normal-screen
+{
+	top:-30px;
+}

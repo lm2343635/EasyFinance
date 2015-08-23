@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Login</title>
+		<link href="public/css/bootstrap.css" rel="stylesheet">
+		<link href="public/css/bootstrap.enhance.css" rel="stylesheet">
+		<link href="public/css/index.css" rel="stylesheet">
+		<link href="public/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+		<link rel="shortcut icon" href="public/images/logo.ico">
+		<script src="public/js/jquery.js"></script>
+		<script src="public/js/bootstrap.js"></script>
+		<script src="public/js/bootstrap-datetimepicker.min.js"></script>
+		<script src="public/js/locales/bootstrap-datetimepicker.fr.js"></script>
+		<script src="public/js/tool.js"></script>
+		<script src="public/js/highcharts.js" ></script>
+		<script src="public/js/exporting.js" ></script>
+		<script src="actdwr/engine.js"></script>
+		<script src="actdwr/interface/UserManager.js"></script>
+		<script src="actdwr/interface/SetManager.js"></script>
+		<script src="actdwr/interface/AccountBookManager.js"></script>
+		<script src="actdwr/interface/ExchangeRateManager.js"></script>
+		<script src="public/js/index.js"></script>
+	</head>
+	<body>
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="item active">
+					<img src="public/images/slide-0.jpg">
+					<div class="carousel-caption">
+						<h2>Easy to manage account!</h2>
+						<h4>With Easy Finance, easy to know where you spend and where you earn.</h4>
+						<h4>Also easy to get different report</h4>
+					</div>
+				</div>
+				<div class="item">
+					<img src="public/images/slide-1.jpg">
+					<div class="carousel-caption">
+						<h2>Record as you want !</h2>
+						<h4>Based on Web Application, now register your account.</h4>
+						<h4>Then you can record everywhere and everytime.</h4>
+					</div>
+				</div>
+				<div class="item">
+					<img src="public/images/slide-2.jpg">
+					<div class="carousel-caption">
+						<h2>Receive your money !</h2>
+						<h4>When you record your spend and your earn, you'll amazing to find :</h4>
+						<h4>It's so easy to receive your money, never difficult.</h4>
+					</div>
+				</div>
+			</div>
+			<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+			    <span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+			    <span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+		</div>
+		<div class="opacity" id="head"></div>
+		<div class="opacity-content">
+			<img alt="Easy Finance" src="public/images/logo.png" class="img-rounded pull-left" height="100px">
+			<img alt="Easy Finance" src="public/images/title.png" class="img-rounded pull-left" height="70px" style="margin-top: 20px;">
+		</div>
+		<div id="login-form">
+			<div class="panel-group" id="accordion">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#login-collapse">
+								Login Now
+							</a>
+						</h4>
+					</div>
+					 <div id="login-collapse" class="panel-collapse collapse in">
+						<div class="panel-body">
+							<div class="input-group input-group-lg">							
+								<input id="login-email" type="text" class="form-control" placeholder="Email Address" value="tom@126.com" required>
+								<span class="input-group-addon">
+									<span id="login-email-exist" class="glyphicon glyphicon-tips glyphicon-ok text-success"></span>
+									<span id="login-email-not-exist" class="glyphicon glyphicon-tips glyphicon-remove text-danger" 
+										data-toggle="popover" data-container="body" data-placement="right" 
+										data-content="The email address you input is not exist ! " data-original-title="">
+									</span>								
+								</span>
+							</div>
+							<div class="input-group input-group-lg">							
+								<input id="login-password" type="password" class="form-control" placeholder="Password" value="tom" required>
+								<span class="input-group-addon">
+									<span id="login-wrong-password" class="glyphicon glyphicon-tips glyphicon-remove text-danger" 
+										data-toggle="popover" data-container="body" data-placement="right" 
+										data-content="The password you input is wrong. Please try again ! " data-original-title="">
+									</span>	
+								</span>
+							</div>
+							<button id="login-submit" class="btn btn-lg btn-primary btn-block" type="submit" >Login</button>				        
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#register-collapse">
+								I don't have account, register now !
+							</a>
+						</h4>
+					</div>
+					<div id="register-collapse" class="panel-collapse collapse">
+						<div class="panel-body">
+							<div id="registering">
+								<div class="input-group input-group-lg">							
+									<input id="register-username" type="text" class="form-control" placeholder="User Name" required>
+									<span class="input-group-addon">
+										<span id="register-username-ok" class="glyphicon glyphicon-tips glyphicon-ok text-success"></span>
+									</span>
+								</div>
+								<div class="input-group input-group-lg">							
+									<input id="register-email" type="text" class="form-control" placeholder="Email" required>
+									<span class="input-group-addon">
+										<span id="register-email-not-exist" class="glyphicon glyphicon-tips glyphicon-ok text-success"></span>
+										<span id="register-email-exist" class="glyphicon glyphicon-tips glyphicon-remove text-danger" 
+											data-toggle="popover" data-container="body" data-placement="right" 
+											data-content="The email address you input has been registered ! " data-original-title="">
+										</span>	
+										<span id="register-not-email" class="glyphicon glyphicon-tips glyphicon-remove text-danger" 
+											data-toggle="popover" data-container="body" data-placement="right" 
+											data-content="The format of the email address you input is wrong ! " data-original-title="">
+										</span>	
+									</span>
+								</div>
+								<div class="input-group input-group-lg">							
+									<input id="register-password" type="password" class="form-control" placeholder="Password" required>
+									<span class="input-group-addon">
+										<span id="register-password-ok" class="glyphicon glyphicon-tips  glyphicon-ok text-success"></span>
+									</span>
+								</div>	
+								<div class="input-group input-group-lg">							
+									<input id="register-password-repeat" type="password" class="form-control" placeholder="Repeat Password" required>
+									<span class="input-group-addon">
+										<span id="register-password-not-equal" class="glyphicon glyphicon-tips glyphicon-remove text-danger" 
+											data-toggle="popover" data-container="body" data-placement="right" 
+											data-content="The two password you input is different ! " data-original-title="">
+										</span>
+									</span>
+								</div>
+								<button id="register-submit" class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+							</div>
+							<div id="register-success">
+								<h3 class="text-success center-block"><span id="register-success-username"></span>, Congratulation!</h3>
+								<p>  You have been registered successfully. Next, the system will guide you to finish some basic settings.</p>
+								<ul class="pager">
+								  <li class="next"><a href="javascript:void(0)" onclick="next()">Next &rarr;</a></li>
+								</ul>
+							</div>
+							<div id="not-set-account-book">
+								<h3 class="text-warning center-block"><span id="warning-username"></span>, Warning!</h3>
+								<p> You cannnot login now even you have been registered successfully. Because you have to finish some basic settings. Click Next to finish them.</p>
+								<ul class="pager">
+								  <li class="next"><a href="javascript:void(0)" onclick="next()">Next &rarr;</a></li>
+								</ul>
+							</div>
+							<div id="add-account-book-fail" class="alert alert-warning alert-dismissable" style="display: none;">
+								<button type="button" class="close" data-dismiss="alert">&times;</button>
+								<strong>Sorry!</strong> Failed to add new Account Book.
+							</div>
+							<div	id="add-account-book-success" class="modal-body" style="display: none;">
+								<h2 class="text-success">Congratulation!</h2>
+								<p> The new Account Book <span id="add-account-book-success-name"></span> have been added successfully. Please login now !</p>
+							</div>
+							<div id="create-account-book">
+								<h3 class="text-success center-block">Set an Account Book</h3>
+								<div class="input-group" style="margin-bottom: 5px;">
+									<span class="input-group-addon"><span>Account Book Name</span></span>
+									<input id="abname" type="text" class="form-control">
+									<span class="input-group-addon" id="add-account-book-wrong" style="display: none;">
+										<span id="add-account-book-wrong-content" class="glyphicon glyphicon-tips glyphicon-remove text-danger" 
+											data-toggle="popover" data-placement="left" 
+											data-content="Be sure to input the name and choose a icon for it ! " data-original-title="">
+										</span>
+									</span>
+								</div>
+								<input id="iid" type="hidden"/>
+								<input id="uid" type="hidden"/>
+								<div class="tab-pane active" id="offical-account-book-icons">
+									<table class="table">
+										<tbody>
+											<tr id="offical-account-book-icons-tr"></tr>
+										</tbody>
+									</table>
+									<div class="page-select">
+										<ul class="pagination pull-right" id="offical-account-book-icons-ul">
+											<li class="active" id="li-offical-1"><a href="javascript:void(0)" onclick="selectIconPage(1)">1</a></li>
+										</ul>			
+									</div>
+								</div>
+								<ul class="pager">
+									<li class="previous"><a href="javascript:void(0)" onclick="submitAccountBook()" style="margin-top: 25px;">Submit</a></li>
+								</ul>
+							</div>
+							<div id="register-failed"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="opacity" id="foot"></div>
+		<div class="opacity-content" id="foot-info">
+			<button class="btn btn-success btn-xs pull-left" id="search-exchange-rate">
+				<span class="glyphicon glyphicon-usd"></span>
+				<span class="glyphicon glyphicon-resize-horizontal"></span>
+				<span class="glyphicon glyphicon-gbp"></span>
+				<span>Search Exchange Rate</span>
+			</button>
+			<span class="pull-right">Copyright of FCZM @ 2014-2015 鄂ICP备15010075号-1</span>
+		</div>
+		<div id="load-other-functions"></div>
+	</body>
+</html>

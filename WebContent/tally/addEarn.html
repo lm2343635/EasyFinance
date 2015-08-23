@@ -1,0 +1,110 @@
+<div class="info-right">
+	<div id="earn-photo" class="alert alert-warning record-photo">
+		<img alt="Record Photo" class="img-thumbnail" title="Click to upload photo" />
+	</div>
+</div>
+<div class="info-left">
+	<div class="add-tally-success alert alert-success">
+		<h1>Congratulations !</h1>
+		<h4>The new Earn Record has been added successfully.</h4>
+		<h4>Time : <strong id="earn-time-success"></strong> , Money : $<strong id="earn-money-success"></strong></h4>
+		<button class="btn btn-primary back-to-add-earn">Back</button>
+	</div>
+	<div class="add-tally-fail alert alert-danger">
+		<h1>Sorry !</h1>
+		<h4>Some error has happened, failed to add the new Earn Record.</h4>
+		<button class="btn btn-primary back-to-add-earn">Back</button>
+	</div>
+	<table class="table add-tally-table">
+		<tbody>
+			<tr>
+				<td>Classification</td>
+				<td>
+					<div class="btn-group add-tally-input"  id="choose-earn-classification">
+						<button type="button" class="btn btn-success choosed-item">
+							<img class="img-rounded select-img" height="18px">
+							<span>Select a Classification</span>
+						</button>
+						<input id="earn-cid" type="hidden" value="1"></input>
+						<button type="button" class="btn btn-success  dropdown-toggle" data-toggle="dropdown">
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+						    <li class="divider"></li>
+						    <li><a href="javascript:void(0)" onclick="addClassification()">Add New Classification</a></li>
+						</ul>
+					</div>
+				</td>
+				<td>Account</td>
+				<td>
+					<div class="btn-group add-tally-input" id="choose-earn-account">
+						<button type="button" class="btn btn-danger choosed-item">
+							<img class="img-rounded select-img" height="18px">
+							<span>Select an Account</span>
+						</button>
+						<input id="earn-aid"  type="hidden" value="1"></input>
+						<button type="button" class="btn btn-danger  dropdown-toggle" data-toggle="dropdown">
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+						    <li class="divider"></li>
+						    <li><a href="javascript:void(0)" onclick="addAccount()">Add New Account</a></li>
+						</ul>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>Shop</td>
+				<td>
+					<div class="btn-group add-tally-input" id="choose-earn-shop">
+						<button type="button" class="btn btn-warning choosed-item">
+							<img class="img-rounded select-img" height="18px">
+							<span>Select a Shop</span>
+						</button>
+						<input id="earn-sid" type="hidden" value="1"></input>
+						<button type="button" class="btn btn-warning  dropdown-toggle" data-toggle="dropdown">
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+						    <li class="divider"></li>
+						    <li><a href="javascript:void(0)" onclick="addShop()">Add New Shop</a></li>
+						</ul>
+					</div>
+				</td>
+				<td>Time</td>
+				<td><input id="earn-time" type="text" readonly class="inputs form_datetime form-control"></td>
+			</tr>
+			<tr>
+				<td>Money</td>
+				<td>
+					<div class="form-group ">
+						<input id="earn-money" type="text" class="inputs form-control" >
+					</div>
+				</td>
+				<td>Remark</td>
+				<td><input id="earn-remark" type="text" class="inputs form-control" ></td>
+			</tr>
+			<tr>
+				<td>Template</td>
+				<td>
+					<div class="btn-group" id="choose-earn-template">
+						<button type="button" class="btn btn-primary choosed-item">
+							<span>Select a Template</span>
+						</button>
+						<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+						    <li class="divider"></li>
+						    <li><a href="javascript:void(0)" onclick="addTemplate()">Add New Template</a></li>
+						</ul>
+					</div>
+				</td>
+				<td colspan="2">
+					<button id="add-earn-submit" class="btn btn-primary btn-xs tally-add-btn" >Add</button>
+				</td>
+			</tr>
+		</tbody>			
+	</table>
+</div>
+<script src="public/js/tally/addEarn.js"></script>

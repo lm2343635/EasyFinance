@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="edu.kit.ActMgr.domain">
+	<class name="User" table="user">
+		<id name="uid" type="integer" column="uid">
+			<generator class="identity"/>
+		</id>
+		<property name="uname" column="uname" type="string" not-null="true" length="50"/>
+		<many-to-one name="photo" column="pid" cascade="all" lazy="false"/>
+		<property name="email" column="email" type="string" not-null="true" length="50" unique="true"/>
+		<property name="password" column="password" type="string" not-null="true" length="50"/>
+		<many-to-one name="usingAccountBook" column="usingabid" cascade="all" class="AccountBook" lazy="false"/>
+		<set name="accountBooks"  cascade="all" inverse="true" lazy="false">  
+            <key column="uid" not-null="true"></key>  
+            <one-to-many class="AccountBook"/>  
+        </set>  
+        <property name="syncKey" column="syncKey" type="string"/>
+        <property name="iOSDeviceInfo" column="iOSDeviceInfo" type="string"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,96 @@
+<div class="panel panel-warning">
+	<div class="panel-heading"><span class="show-title">Password</span></div>
+	<div class="panel-body">
+		<div id="modify-password">
+			<ul class="list-unstyled" >
+				<li><p>Modify Your Password</p></li>
+				<li>
+					<div class="input-group">
+						<span class="input-group-addon"><span>Old Password</span></span>
+						<input id="old-password" type="password" class="form-control" placeholder="Please input your old password here.">
+						<span class="input-group-addon" id="old-password-wrong" style="display: none;">
+							<span id="old-password-wrong-content" class="glyphicon glyphicon-remove text-danger" 
+								data-toggle="popover" data-container="body" data-placement="right" 
+								data-content="The old password you input is wrong ! " data-original-title="">
+							</span>
+						</span>
+					</div>
+				</li>
+				<li>
+					<div class="input-group">
+						<span class="input-group-addon"><span>New Password</span></span>
+						<input id="new-password" type="password" class="form-control" placeholder="Please input your new password here.">
+					</div>	
+				</li>
+				<li>
+					<div class="input-group">
+						<span class="input-group-addon"><span>Repeat Password</span></span>
+						<input id="new-password-repeat" type="password" class="form-control" placeholder="Please repaet your new password here.">
+						<span class="input-group-addon" id="new-password-wrong" style="display: none;">
+							<span id="new-password-not-equal" class="glyphicon glyphicon-remove text-danger" 
+								data-toggle="popover" data-container="body" data-placement="right" 
+								data-content="The two password you input is different ! " data-original-title="">
+							</span>
+						</span>
+					</div>
+				</li>
+			</ul>
+			<button class="btn btn-primary pull-right" onclick="modifyPsswordSubmit()">Submit</button>
+			<button class="btn btn-default pull-right" onclick="modifyPsswordReset()">Reset</button>
+		</div>
+	</div>
+	<div class="modal fade" id="modify-password-success-modal" tabindex="-1" >
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header modal-header-success">
+					<button type="button" class="close" data-dismiss="modal" >&times;</button>
+					<h4 class="modal-title" >Modify Password Success</h4>
+				</div>
+				<div class="modal-body">
+					<h2 class="text-success">Congratulation!</h2>
+					<p>
+						You have been modified your password successfully. Your new password is
+						<strong><span id="modal-new-password" class="text-danger"></span></strong>,
+						 please remember it.
+					</p>		
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="modify-password-fail-modal" tabindex="-1" >
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header modal-header-warning">
+					<button type="button" class="close" data-dismiss="modal" >&times;</button>
+					<h4 class="modal-title" >Modify Password Fail</h4>
+				</div>
+				<div class="modal-body">
+					<h2 class="text-danger">Sorry.</h2>
+					<p>You are failed to modify your password, please check and try again.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="panel panel-danger">
+	<div class="panel-heading"><span class="show-title">Synchronization History</span></div>
+	<div class="panel-body">
+		<table id="synchronization-history-table" class="table">
+			<thead>
+				<tr>
+					<th>Sync Time</th>
+					<th>Device Name</th>
+					<th>IP Address</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</div>
+</div>
+<script src="public/js/setting/security.js"></script>

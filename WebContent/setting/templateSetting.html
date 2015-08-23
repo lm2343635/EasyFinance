@@ -1,0 +1,119 @@
+<div class="panel-heading">
+	<span class="show-title">Template</span>
+	<button class="btn btn-default btn-xs add-modal-btn" id="add-classification-btn" data-toggle="modal" data-target="#add-template">
+		<span class="glyphicon glyphicon-plus"></span>
+	</button>
+</div>
+<div class="panel-body">
+	<table class="table table-hover set-table" id="template-table">
+		<thead>
+			<tr>
+				<th>Template Name</th>
+				<th>Classification</th>
+				<th>Shop</th>
+				<th>Account</th>
+				<th>Delete</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+</div>
+
+<div class="modal fade add-modal" id="add-template" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header modal-header-primary">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">Add New Template</h4>
+			</div>
+			<div class="modal-body add-success" style="display: none;">
+				<h2 class="text-success">Congratulation!</h2>
+				<p> The new Template <span></span> have been added successfully.</p>
+				<button class="btn btn-primary">Back</button>
+				<button class="btn btn-default pull-right" data-dismiss="modal">Close</button>
+			</div>
+			<div class="modal-body add-form">
+				<div class="input-group">
+					<span class="input-group-addon"><span>Template Name</span></span>
+					<input id="tpname" type="text" class="form-control" placeholder="Please input your new Template name.">
+					<span class="input-group-addon" id="add-template-wrong" style="display: none;">
+						<span class="glyphicon glyphicon-remove text-danger" 
+							data-toggle="popover" data-placement="left" 
+							data-content="Be sure to input template name ! " data-original-title="">
+						</span>
+					</span>
+				</div>
+				<table class="table"  style="margin-top: 15px;margin-bottom: 0;">
+					<tbody>
+						<tr>
+							<td>Classification : </td>
+							<td>
+								<div class="btn-group" id="template-classification">
+									<button type="button" class="btn btn-success choosed-item">
+										<img class="img-rounded select-img" height="18px">
+										<span>Select a Classification</span>
+									</button>
+									<input id="template-cid" type="hidden"></input>
+									<button type="button" class="btn btn-success  dropdown-toggle" data-toggle="dropdown">
+										<span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu">
+									    <li class="divider"></li>
+									    <li><a href="javascript:void(0)" onclick="addClassification()">Add new Classification</a></li>
+									</ul>
+								</div>						
+							</td>
+						</tr>
+						<tr>
+							<td>Account : </td>
+							<td>
+								<div class="btn-group" id="template-account">
+									<button type="button" class="btn btn-danger choosed-item">
+										<img class="img-rounded select-img" height="18px">
+										<span>Select an Account</span>
+									</button>
+									<input id="template-aid"  type="hidden"></input>
+									<button type="button" class="btn btn-danger  dropdown-toggle" data-toggle="dropdown">
+										<span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu">
+									    <li class="divider"></li>
+									    <li><a href="javascript:void(0)" onclick="addAccount()">Add new Account</a></li>
+									</ul>		
+								</div>	
+							</td>
+						</tr>
+						<tr>
+							<td>Shop : </td>
+							<td>
+								<div class="btn-group" id="template-shop">
+									<button type="button" class="btn btn-warning choosed-item">
+										<img class="img-rounded select-img" height="18px">
+										<span>Select a Shop</span>
+									</button>
+									<input id="template-sid" type="hidden"></input>
+									<button type="button" class="btn btn-warning  dropdown-toggle" data-toggle="dropdown">
+										<span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu">
+									    <li class="divider"></li>
+									    <li><a href="javascript:void(0)" onclick="addShop()">Add new Shop</a></li>
+									</ul>
+								</div>
+							</td>
+						</tr>											
+					</tbody>
+				</table>			
+			</div>
+			<div class="alert alert-warning alert-dismissable add-fail" style="display: none;">
+				<button type="button" class="close" data-dismiss="alert">&times;</button>
+				<strong>Sorry!</strong> Failed to add new Account.
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button id="add-template-submit" type="button" class="btn btn-primary">Save</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="public/js/setting/templateSetting.js"></script>

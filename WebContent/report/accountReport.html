@@ -1,0 +1,71 @@
+<div class="panel-heading">
+	<span class="show-title">Account Report</span>
+	<ul class="pagination" id="choose-show-type">
+		 <li class="active stats-chart-column-li">
+			 <a href="javascript:void(0)" title="Show as Colum Chart" onclick="changeShowType('stats-chart-column')">
+			 	<span class="glyphicon glyphicon-stats" ></span>
+			 </a>
+		 </li>
+		 <li class="stats-chart-pie-in-li">
+			 <a href="javascript:void(0)" title="Show as Pie Chart of Account In" onclick="changeShowType('stats-chart-pie-in')">
+			 	<span class="glyphicon glyphicon glyphicon-log-in" ></span>
+			 </a>
+		 </li>
+		 <li class="stats-chart-pie-out-li">
+			 <a href="javascript:void(0)" title="Show as Pie Chart of Account Out" onclick="changeShowType('stats-chart-pie-out')">
+			 	<span class="glyphicon glyphicon glyphicon-log-out" ></span>
+			 </a>
+		 </li>
+		 <li class="stats-table-li">
+			 <a href="javascript:void(0)" title="Show as Table" onclick="changeShowType('stats-table')">
+				 <span class="glyphicon glyphicon-list-alt"></span>
+			 </a>
+		 </li>
+	</ul>
+</div>
+<div class="panel-body">
+	<nav class="navbar navbar-default">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="javascript:void(0)">Show All</a>
+		</div>
+		<div class="collapse navbar-collapse" >
+
+		</div>
+	</nav>
+	<div class="stats-chart-column" id="account-report-column"></div>
+	<div class="stats-chart-pie-in stats-hide" id="account-stats-chart-pie-in"></div>
+	<div class="stats-chart-pie-out stats-hide" id="account-stats-chart-pie-out"></div>
+	<div class="stats-table panel panel-warning stats-hide">
+		<div class="panel-heading">Table data of Account</div>
+		<table class="table table-hover" id="account-report-table">
+			<thead>
+				<tr>
+					<th>Account</th>
+					<th>Inflows</th>
+					<th>Outflows</th>
+					<th>Surplus</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</div>
+	<div class="alert alert-warning">
+		<span class="select-time">Select Time : </span>
+		<span class="select-time">Form</span>
+		<span class="start-time">
+			<input id="account-start-time" type="text" readonly class="inputs form_datetime form-control select-time account-select-time"  placeholder="Start Time">
+		</span>
+		<span class="select-time">To</span>
+		<span class="end-time">
+			<input id="account-end-time" type="text" readonly class="inputs form_datetime form-control select-time account-select-time"  placeholder="End Time">
+		</span>
+		<span id="account-time-empty" style="display: none;">
+			<span class="glyphicon glyphicon-remove text-danger" 
+				data-toggle="popover" data-placement="right" 
+				data-content="Select start time and end time! " data-original-title="">
+			</span>
+		</span>
+		<button class="btn btn-primary select-time-sbt" id="account-report-sbt">Submit</button>
+	</div>
+</div>
+<script src="public/js/report/accountReport.js"></script>

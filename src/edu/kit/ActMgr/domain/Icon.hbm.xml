@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="edu.kit.ActMgr.domain">
+	<class name="Icon" table="icon">
+		<id name="iid" type="integer" column="iid">
+			<generator class="identity"/>
+		</id>
+		<property name="iname" column="iname" not-null="true"/>
+		<property name="type" column="type" not-null="true"/>
+		<many-to-one name="user" cascade="all" class="User" column="uid"/>
+		<property name="sync" column="sync" type="integer" not-null="true"/>
+	</class>
+</hibernate-mapping>

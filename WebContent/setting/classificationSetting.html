@@ -1,0 +1,116 @@
+<div class="panel-heading">
+	<span class="show-title">Classification</span>
+	<button class="btn btn-primary btn-xs add-modal-btn" id="add-classification-btn" data-toggle="modal" data-target="#add-classification">
+		<span class="glyphicon glyphicon-plus"></span>
+	</button>
+</div>
+<div class="panel-body">
+	<table class="table table-hover set-table" id="classification-table">
+		<thead>
+			<tr>
+				<th>Icon</th>
+				<th>Classification Name</th>
+				<th>Total Inflows</th>
+				<th>Total Outflows</th>
+				<th>Surplus</th>
+				<th>Delete</th>
+			</tr>
+		</thead>
+		<tbody>
+
+		</tbody>
+	</table>
+</div>
+
+<div class="modal fade add-modal" id="add-classification" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header modal-header-success">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">Add New Classification</h4>
+			</div>
+			<div class="modal-body add-success" style="display: none;">
+				<h2 class="text-success">Congratulation!</h2>
+				<p> The new Classification <span></span> have been added successfully.</p>
+				<button class="btn btn-primary">Back</button>
+				<button class="btn btn-default pull-right" data-dismiss="modal">Close</button>
+			</div>
+			<div class="modal-body add-form">
+				<div class="input-group">
+					<span class="input-group-addon"><span>Classification Name</span></span>
+					<input id="cname" type="text" class="form-control" placeholder="Please input your new classification name.">
+					<span class="input-group-addon" id="add-classification-wrong" style="display: none;">
+						<span class="glyphicon glyphicon-remove text-danger" 
+							data-toggle="popover" data-placement="left" 
+							data-content="Be sure to input all and choose a icon for it ! " data-original-title="">
+						</span>
+					</span>
+				</div>
+				<input id="iid" type="hidden"/>
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#offical-classification-icons" data-toggle="tab">The offical icons : </a></li>
+					<li><a href="#own-classification-icons" data-toggle="tab">Your own icons : </a></li>
+					<li><a href="#friends-classification-icons" data-toggle="tab">Friends' icons : </a></li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane active" id="offical-classification-icons">
+						<table id="offical-classification-icons-table" class="table">
+							<tbody>
+
+							</tbody>
+						</table>
+						<div class="page-select">
+							<ul class="pagination pull-right" id="offical-classification-icons-ul"></ul>			
+						</div>
+					</div>
+					<div class="tab-pane" id="friends-classification-icons">
+						<table class="table">
+							<tbody>
+								
+							</tbody>
+						</table>
+						<div class="page-select">
+							<ul class="pagination pull-right">
+								<li><a href="#">&laquo;</a></li>
+								<li class="active"><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+								<li><a href="#">&raquo;</a></li>
+							</ul>			
+						</div>
+					</div>	
+					<div class="tab-pane" id="own-classification-icons">
+						<table class="table">
+							<tbody>
+
+							</tbody>
+						</table>
+						<div class="page-select">
+							<ul class="pagination pull-right">
+								<li><a href="#">&laquo;</a></li>
+								<li class="active"><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+								<li><a href="#">&raquo;</a></li>
+							</ul>			
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="alert alert-warning alert-dismissable add-fail" style="display: none;">
+				<button type="button" class="close" data-dismiss="alert">&times;</button>
+				<strong>Sorry!</strong> Failed to add new Classification.
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-info pull-left">Upload my own icon</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button id="add-classification-submit" type="button" class="btn btn-primary">Save</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="public/js/setting/classificationSetting.js"></script>

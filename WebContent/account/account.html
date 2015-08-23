@@ -1,0 +1,145 @@
+<link rel="stylesheet" href="public/css/account.css">	
+<script type="text/javascript" src="public/js/account/account.js"></script>
+
+<div class="list-group" id="account-list-group">
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<h4 class="panel-title"><span class="glyphicon glyphicon-credit-card"></span>Account Center</h4>
+		</div>
+		<table class="table">
+			<tbody>
+				<tr>
+					<td>Total Assets : </td>
+					<td>$ <span id="total-assets"></span></td>
+				</tr>
+				<tr>
+					<td>Total Liabilities : </td>
+					<td>$ <span id="total-liabilities"></span></td>
+				</tr>	
+				<tr>
+					<td>Net Assets : </td>
+					<td>$ <span id="net-assets"></span></td>
+				</tr>		
+			</tbody>
+			</table>
+		<div class="panel-footer">Choose an Account</div>
+	</div>
+	<div id="account-list"></div>
+	<input id="aid" type="hidden">
+	<button class="btn btn-info btn-lg" id="add-account" data-toggle="modal" data-target="#add-account-modal">
+		<img src="public/images/add_account.png">
+	    <h4 class="panel-title">Add New Account</h4>
+	</button>
+</div>
+<div class="panel panel-success" id="account-content">
+	<div class="panel-heading">
+		<span class="show-title">Account Information and Checking</span>
+	</div>
+	<div class="panel-body">
+		<button type="button" class="btn btn-danger account-content-btn">
+			<span class="glyphicon glyphicon-trash"></span>Delete
+		</button>
+		<button type="button" class="btn btn-info account-content-btn">
+			<span class="glyphicon glyphicon-pencil"></span>Edit
+		</button>
+		<button title="Download this account checking table as excel." type="button" class="btn btn-success account-content-btn">
+			<span class="glyphicon glyphicon-cloud-download"></span>Excel
+		</button>
+		<div class="pull-right" id="account-content-info">
+			<table>
+				<tr>
+					<td colspan="2"><h3 id="assets"><small>Asset : </small><strong class="text-success">$ <span id="account-asset"></span></strong></h3></td>
+				</tr>
+				<tr>
+					<td><small>Total Inflow : <strong class="text-info">$ <span id="account-inflow"></span> </strong> </small> </td>
+					<td><small> Total Outflow : <strong class="text-danger">$ <span id="account-outflow"></span></strong></small></td>
+				</tr>
+			</table>
+		</div>
+		<div class="alert alert-default">
+			<span class="select-time">Select Time : </span>
+			<span class="select-time">Form</span>
+			<span class="start-time">
+				<input id="checking-start-time" type="text" readonly class="inputs form_datetime form-control select-time checking-select-time"  placeholder="Start Time">
+			</span>
+			<span class="select-time">To</span>
+			<span class="end-time">
+				<input id="checking-end-time" type="text" readonly class="inputs form_datetime form-control select-time checking-select-time"  placeholder="End Time">
+			</span>
+			<span id="time-empty" style="display: none;">
+				<span class="glyphicon glyphicon-remove text-danger" 
+					data-toggle="popover" data-placement="right" 
+					data-content="Select start time and end time! " data-original-title="">
+				</span>
+			</span>
+<!-- 					<div class="collapse navbar-collapse" > -->
+<!-- 						<ul class="nav navbar-nav"> -->
+<!-- 							<li class="dropdown"  id="choose-type"> -->
+<!-- 								<a href="#" class="active dropdown-toggle" data-toggle="dropdown"><span>By Day</span><b class="caret"></b></a> -->
+<!-- 								<input type="hidden" id="type" value="0"> -->
+<!-- 								<ul class="dropdown-menu"> -->
+<!-- 									<li><a href="javascript:void(0)" onclick="changeType(0,'checking-start-time','checking-end-time')">By Day</a></li> -->
+<!-- 									<li><a href="javascript:void(0)" onclick="changeType(1,'checking-start-time','checking-end-time')">By Month</a></li> -->
+<!-- 									<li><a href="javascript:void(0)" onclick="changeType(2,'checking-start-time','checking-end-time')">By Year</a></li> -->
+<!-- 								</ul> -->
+<!-- 							</li> -->
+<!-- 						</ul>	 -->
+<!-- 					</div> -->
+			<button id="checking-time-submit" class="btn btn-primary select-time-sbt">Submit</button>
+		</div>
+			<table class="table table-hover" id="checking-table">
+				<thead>
+					<tr>
+						<th>Date</th>
+						<th>Inflow</th>
+						<th>Outflow</th>
+						<th>Total Inflow</th>
+						<th>Total Outflow</th>
+						<th>Surplus</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+	</div>
+<div class="modal fade" id="add-account-modal" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header modal-header-info">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">Add New Account</h4>
+			</div>
+			<div class="modal-body">
+				<div class="input-group">
+					<span class="input-group-addon"><span>Account Name</span></span>
+					<input type="text" class="form-control" placeholder="Please input Account Name here.">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon"><span>Net Assets</span></span>
+					<input type="text" class="form-control" placeholder="Please input Net Assets here.">
+				</div>
+				<h4 class="text-info">Choose an icon for your new account : </h4>
+				<table class="table" id="account-icons">
+					<tbody>
+						<tr>
+							<td><img src="upload/1/1/1.png" class="img-thumbnail img-selected"></td>
+							<td><img src="upload/1/1/2.png" class="img-thumbnail"></td>
+							<td><img src="upload/1/1/3.png" class="img-thumbnail"></td>
+							<td><img src="upload/1/1/4.png" class="img-thumbnail"></td>
+							<td><img src="upload/1/1/5.png" class="img-thumbnail"></td>
+							<td><img src="upload/1/1/6.png" class="img-thumbnail"></td>
+							<td><img src="upload/1/1/7.png" class="img-thumbnail"></td>
+							<td><img src="upload/1/1/8.png" class="img-thumbnail"></td>
+							<td><img src="upload/1/1/9.png" class="img-thumbnail"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-info pull-left">Upload my own icon</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save</button>
+			</div>
+		</div>
+	</div>
+</div>

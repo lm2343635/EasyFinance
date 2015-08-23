@@ -1,0 +1,96 @@
+body 
+{
+	padding: 0;
+	margin: 0;
+}
+
+#carousel-example-generic
+{
+	position: absolute;
+}
+
+#login-form
+{
+	position: absolute;
+	opacity:0;
+	z-index: 10;
+	width: 500px;
+}
+
+.opacity
+{
+	position: absolute;
+	background-color:white;
+	opacity:0.4;
+}
+
+.opacity-content
+{
+	position: absolute;
+	width: 1008px;	
+}
+
+#head
+{
+	width: 100%;
+	height: 100px;
+}
+
+#foot
+{
+	width: 100%;
+	height: 30px;
+	bottom: 0;
+}
+
+.input-group
+{
+	margin-bottom: 5px;
+}
+
+.glyphicon-tips
+{
+	display: none;
+}
+
+#register-success,#create-account-book,#not-set-account-book
+{
+	display: none;
+}
+
+.img-thumbnail
+{
+	cursor: pointer;
+}
+
+.img-selected,.img-thumbnail:hover
+{
+	background-color: #cecece;
+}
+
+#foot-info
+{
+	bottom: 0;
+}
+
+#foot-info span
+{
+	color: white;
+}
+
+#search-exchange-rate
+{
+	margin-bottom: 3px;
+}
+
+#search-exchange-rate:hover
+{
+	cursor: pointer;
+	color: #cccccc;
+}
+
+.carousel-inner .item img
+{
+	height: 100%;
+	width: 100%
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Easy Finance</title>
+		<link rel="stylesheet" href="public/css/main.css">
+		<link rel="shortcut icon" href="public/images/logo.ico">
+		<link rel="stylesheet" href="public/css/basic.css">
+		<link rel="stylesheet" href="public/css/bootstrap.css">
+		<link rel="stylesheet" href="public/css/bootstrap.enhance.css">
+		<link rel="stylesheet" href="public/css/bootstrap.photo.css">
+		<link rel="stylesheet" href="public/css/bootstrap-datetimepicker.min.css" media="screen">
+		<link rel="stylesheet" href="public/css/bootstrap-switch.css">
+		<link rel="stylesheet" href="public/css/font-awesome.min.css">
+		<link rel="stylesheet" href="public/css/buttons.css">
+		<link rel="stylesheet" href="public/css/jquery.fileupload.css">
+		<script src="public/js/jquery.js"></script>
+		<script src="public/js/jquery.ui.widget.js"></script>
+		<script src="public/js/jquery.iframe-transport.js"></script>
+		<script src="public/js/jquery.fileupload.js"></script>
+		<script src="public/js/bootstrap.js"></script>
+		<script src="public/js/bootstrap-datetimepicker.min.js"></script>
+		<script src="public/js/locales/bootstrap-datetimepicker.fr.js"></script>
+		<script src="public/js/bootstrap-switch.js"></script>
+		<script src="public/js/bootstrap.confirm.js"></script>
+		<script src="public/js/bootstrap.photo.js"></script>
+		<script src="public/js/Chart.js"></script>
+		<script src="public/js/highcharts.js" ></script>
+		<script src="public/js/exporting.js" ></script>
+		<script src="actdwr/engine.js"></script>
+		<script src="actdwr/interface/UserManager.js"></script>
+		<script src="actdwr/interface/TallyManager.js"></script>
+		<script src="actdwr/interface/SetManager.js"></script>
+		<script src="actdwr/interface/ClassificationManager.js"></script>
+		<script src="actdwr/interface/AccountBookManager.js"></script>
+		<script src="actdwr/interface/AccountManager.js"></script>
+		<script src="actdwr/interface/ShopManager.js"></script>
+		<script src="actdwr/interface/TemplateManager.js"></script>
+		<script src="actdwr/interface/ReportManager.js"></script>
+		<script src="actdwr/interface/ExchangeRateManager.js"></script>
+		<script src="actdwr/interface/AccountHistoryManager.js"></script>
+		<script src="actdwr/interface/PhotoManager.js"></script>
+		<script src="public/js/tool.js" ></script>
+		<script src="public/js/main.js" ></script>
+	</head>
+	<body>
+		<div id="header">
+			<div id="header-menu">
+				<div id="header-menu-container">
+					<div class="btn-group" style="margin-top: 5px;">
+						<button type="button" class="btn btn-info btn-xs" id="using-account-book">
+							<img class="img-rounded account-book-img" height="18px">
+							<span></span>
+						</button>
+						<button type="button" class="btn btn-info btn-xs dropdown-toggle" data-toggle="dropdown">
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" id="select-account-books">
+						    <li class="divider"></li>
+						    <li><a href="javascript:void(0)" onclick="goto('')">Create New Account Book</a></li>
+						</ul>
+					</div>
+					<ul id="header-menu-ul">
+						<li id="l-message" class="l-message">
+							<span class="glyphicon glyphicon-envelope" ></span>
+							<a id="message" href="#">message</a>
+						</li>
+						<li class="l-welcome">
+							<img id="circle-user-photo" class="img-circle">
+							<a href="#"><span id="header-nickname"></span></a>
+						</li>
+						<li class="l-exit"><a href="UserServlet?task=exit">exit</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="header-container">
+				<div id="logo">
+					<a href="#"><img src="public/images/logo.png"/></a>
+				</div>
+				<ul class="list-inline pull-right" id="navigation">
+				  	<li id="l-main"><a href="basic.html">Main</a></li>
+					<li id="l-tally"><a href="tally/tally.html">Tally</a></li>
+					<li id="l-report"><a href="report/report.html">Report</a></li>
+					<li id="l-account"><a href="account/account.html">Account</a></li>
+					<li id="l-set"><a href="setting/setting.html">Setting</a></li>
+				</ul>
+
+			</div>
+		</div>
+		<div id="bg1"><div id="bg1-c"></div></div>
+		<div id="bg2"></div>
+		<div id="mainContent"></div>
+	</body>
+</html>

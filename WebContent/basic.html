@@ -1,0 +1,153 @@
+<link rel="stylesheet" href="public/css/basic.css">
+<script type="text/javascript" src="public/js/basic.js"></script>
+
+<div id="basic">
+	<div id="riLeft">
+		<div id="spend-earn" class="info-box panel panel-primary">
+			<div class="panel-heading">
+				<img src="public/images/spend-earn.png">
+				<h3 class="panel-title">Spend/Earn Information</h3>
+			</div>
+			<table class="table table-bordered table-hover">
+				<tbody>
+					<tr class="active">
+						<td class="text-center">Type \ Time</td>
+						<td class="text-center">This Week</td>
+						<td class="text-center">This Month</td>
+						<td class="text-center">This year</td>
+					</tr>
+					<tr>
+						<td class="active text-center">Spend</td>
+						<td class="text-center">$ <span id="this-week-spend"></span></td>
+						<td class="text-center">$ <span id="this-month-spend"></span></td>
+						<td class="text-center">$ <span id="this-year-spend"></span></td>
+					</tr>
+					<tr >
+						<td class="active text-center">Earn</td>
+						<td class="text-center">$ <span id="this-week-earn"></span></td>
+						<td class="text-center">$ <span id="this-month-earn"></span></td>
+						<td class="text-center">$ <span id="this-year-earn"></span></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="simple-info" class="info-box panel panel-info">
+			<div class="panel-heading">
+				<img src="public/images/simple-info.png">
+				<h3 class="panel-title">Simple Finance Information</h3>
+			</div>
+			<div class="panel-body">
+				<p>
+					This month you have spend $ <span id="finance-this-month-spend"></span>,
+					 your net assets is $ <span id="finance-net-assets">.</span>
+				</p>
+			</div>
+		</div>
+		<div id="graph-area" class="info-box">
+			<div id="spend-classification" class="graph panel panel-success">
+				<div class="panel-heading">
+					<img src="public/images/spend-classification.png">
+					<h5 class="panel-title">Spend Classification Graph <small>this week</small></h5>
+				</div>
+				<div class="panel-body">
+					<canvas id="spend-classification-graph" width="320" height="265"></canvas>
+					<div id="spend-classification-graph-no-data" class="alert alert-danger graph-no-data">No Data</div>
+				</div>
+			</div>
+			<div id="spend-earn-trend" class="graph panel panel-warning">
+				<div class="panel-heading">
+					<img src="public/images/spend-trend.png">
+					<h5 class="panel-title">Spend/Earn Trend Graph <small>this week</small></h5>
+				</div>
+				<div class="panel-body">
+					<canvas id="spend-earn-trend-graph" width="320" height="265"></canvas>
+					<div id="spend-earn-trend-graph-no-data" class="alert alert-danger graph-no-data">No Data</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="riRight">
+		<div id="user-info">
+			<img alt="User Photo" class="img-thumbnail" title="Click to upload photo"/>
+			<button type="button" class="btn btn-primary" title="Click to modify user information"></button>
+		</div>
+		<div id=account-info>
+			<h4 class="text-center">Account Information</h4>
+			<table class="table table-hover">
+				<tbody>
+					<tr>
+						<td>Total Assets : </td>
+						<td>$ <span id="total-assets"></span></td>
+					</tr>
+					<tr>
+						<td>Total Liabilities : </td>
+						<td>$ <span id="total-liabilities"></span></td>
+					</tr>	
+					<tr>
+						<td>Net Assets : </td>
+						<td>$ <span id="net-assets"></span></td>
+					</tr>	
+				</tbody>
+				</table>
+		</div>
+		<div id="other-functions">
+			<h4 class="text-center">Other Functions</h4>
+			<table class="table" >
+				<tbody>
+					<tr>
+						<td><img id="album" class="other-funtions-img" src="public/images/OtherFunctions/Album.png"></img></td>
+						<td><img id="export" class="other-funtions-img" src="public/images/OtherFunctions/Export.png"></img></td>
+						<td><img id="import" class="other-funtions-img" src="public/images/OtherFunctions/Import.png"></img></td>
+					</tr>
+					<tr>
+						<td class="other-funtions-word">Album</td>
+						<td class="other-funtions-word">Export</td>
+						<td class="other-funtions-word">Import</td>
+						
+					</tr>
+					<tr>
+						<td><img id="diary" class="other-funtions-img" src="public/images/OtherFunctions/Diary.png"></img></td>
+						<td><img id="exchange-rate" class="other-funtions-img" src="public/images/OtherFunctions/ExchangeRate.png"></img></td>
+						<td><img id="synchronize" class="other-funtions-img" src="public/images/OtherFunctions/Synchronize.png"></img></td>
+					</tr>
+					<tr>
+						<td class="other-funtions-word">Diary</td>
+						<td class="other-funtions-word">ExchangeRate</td>
+						<td class="other-funtions-word">Synchronize</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="upload-photo-modal" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header modal-header-info">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Upload User Photo</h4>
+			</div>
+			<div class="modal-body">
+			    <span class="btn btn-success fileinput-button">
+			        <i class="glyphicon glyphicon-plus"></i>
+			        <span>Select your user photo</span>
+			        <input id="upload-photo" type="file" name="files[]" multiple>
+			    </span>
+			    <span class="pull-right text-warning" id="upload-photo-tip">Only image files (JPG, GIF, PNG) are allowed.</span>
+				<div class="progress" id="upload-photo-progress">
+				    <div class="progress-bar progress-bar-striped active"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+				</div>
+				<div class="panel panel-default" id="uploaded-photo-panel">
+				    <div class="panel-body">
+				    	<img id="uploaded-photo" class="img-thumbnail"/>
+				    </div>
+				</div>  
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-warning" id="upload-photo-reset">Reset</button>
+				<button type="button" class="btn btn-success" data-dismiss="modal">Save</button>		
+			</div>
+		</div>
+	</div>
+</div>
+<div id="load-other-functions"></div>

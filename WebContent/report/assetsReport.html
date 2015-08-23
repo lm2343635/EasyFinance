@@ -1,0 +1,94 @@
+<div class="panel-heading">
+	<span class="show-title">Assets Report</span>
+	<ul class="pagination" id="choose-show-type">
+		 <li class="active stats-chart-column-li">
+			 <a href="javascript:void(0)" title="Show as Chart" onclick="changeShowType('stats-chart-column')">
+			 	<span class="glyphicon glyphicon-stats" ></span>
+			 </a>
+		 </li>
+		 <li class="stats-table-li">
+			 <a href="javascript:void(0)" title="Show as Table" onclick="changeShowType('stats-table')">
+				 <span class="glyphicon glyphicon-list-alt"></span>
+			 </a>
+		 </li>
+	</ul>
+</div>
+<div class="panel-body">
+	<nav class="navbar navbar-default">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">Show All</a>
+		</div>
+		<div class="collapse navbar-collapse" >
+			<ul class="nav navbar-nav">
+				<li class="dropdown"  id="choose-type">
+					<a href="#" class="active dropdown-toggle" data-toggle="dropdown"><span>By Day</span><b class="caret"></b></a>
+					<input type="hidden" id="type" value="0">
+					<ul class="dropdown-menu">
+						<li><a href="javascript:void(0)" onclick="changeType(0,'assets-start-time','assets-end-time')">By Day</a></li>
+						<li><a href="javascript:void(0)" onclick="changeType(1,'assets-start-time','assets-end-time')">By Month</a></li>
+						<li><a href="javascript:void(0)" onclick="changeType(2,'assets-start-time','assets-end-time')">By Year</a></li>
+					</ul>
+				</li>
+			</ul>	
+		</div>
+	</nav>
+	<div class="stats-chart-column" id="assets-report-graphics"></div>
+	<div class="stats-table panel panel-info stats-hide">
+		<div class="panel-heading">Monthly Earn</div>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Time</th>
+					<th>Net Assets</th>
+					<th>Total Assets</th>
+					<th>Total Liabilities</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>February</td>
+					<td>4587</td>
+					<td>7824</td>
+					<td>5798</td>
+				</tr>
+				<tr>
+					<td>March</td>
+					<td>5798</td>
+					<td>5438</td>
+					<td>4587</td>
+				</tr>
+				<tr>
+					<td>April</td>
+					<td>7824</td>
+					<td>4587</td>
+					<td>5438</td>
+				</tr>
+				<tr>
+					<td>May</td>
+					<td>5438</td>
+					<td>4587</td>
+					<td>5798</td>
+				</tr>
+				<tr class="info">
+					<td><strong>Total</strong></td>
+					<td><strong>25634</strong></td>
+					<td><strong>54423</strong></td>
+					<td><strong>24447</strong></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="alert alert-info">
+		<span class="select-time">Select Time : </span>
+		<span class="select-time">Form</span>
+		<span class="start-time">
+			<input id="assets-start-time" type="text" readonly class="inputs form_datetime form-control select-time assets-select-time"  placeholder="Start Time">
+		</span>
+		<span class="select-time">To</span>
+		<span class="end-time">
+			<input id="assets-end-time" type="text" readonly class="inputs form_datetime form-control select-time assets-select-time"  placeholder="End Time">
+		</span>
+		<button class="btn btn-primary select-time-sbt">Submit</button>
+	</div>
+</div>
+<script src="public/js/report/assetsReport.js"></script>

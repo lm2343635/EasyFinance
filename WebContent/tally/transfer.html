@@ -1,0 +1,72 @@
+<nav class="navbar navbar-default" >
+	<div class="navbar-header">
+		<a class="navbar-brand" href="javascript:void(0)" onclick="showAllTransfer()">Show All</a>
+	</div>
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		<ul class="nav navbar-nav">
+			<li class="dropdown" id="show-type-account-out">
+				<a href="#" class="active dropdown-toggle" data-toggle="dropdown">
+					<img class="img-rounded select-img" height="18px">
+					<span>All Transfer Out</span>
+					<b class="caret"></b>
+				</a>
+				<input id="tfout" type="hidden" value="-1">
+				<ul class="dropdown-menu">
+					<li class="divider"></li>
+					<li><a href="javascript:void(0)" onclick="chooseAccountOut(-1)">All Account</a></li>
+					<li><a href="javascript:void(0)">Add New Account</a></li>
+				</ul>
+			</li>
+			<li class="dropdown" id="show-type-account-in">
+				<a href="#" class="active dropdown-toggle" data-toggle="dropdown">
+					<img class="img-rounded select-img" height="18px">
+					<span>All Transfer In</span>
+					<b class="caret"></b>
+				</a>
+				<input id="tfin" type="hidden" value="-1">
+				<ul class="dropdown-menu">
+					<li class="divider"></li>
+					<li><a href="javascript:void(0)" onclick="chooseAccountIn(-1)">All Account</a></li>
+					<li><a href="javascript:void(0)">Add New Account</a></li>
+				</ul>
+			</li>
+		</ul>
+		<form class="navbar-form navbar-left" onsubmit="return transferRemark();">
+			<div class="form-group">
+				<input id="tf-remark" type="text" class="form-control" placeholder="Search in Remark">
+			</div>
+			<button type="submit" class="btn btn-success">Submit</button>
+		</form>
+	</div>
+</nav>
+<div id="list-content">
+	<div class="panel panel-info text-center" id="select-month">
+		<div class="panel-heading ">
+			<span id="transfer-last-year" class="glyphicon glyphicon-chevron-left"></span>
+			<span id="transfer-year"></span>
+			<span id="transfer-next-year" class="glyphicon glyphicon-chevron-right"></span>
+		</div>
+		<div class="panel-body list-group" id="transfer-months"></div>
+		<input id="tf-year" type="hidden">
+		<input id="tf-month" type="hidden">
+	</div>
+	<div class="panel panel-warning" id="day-list">
+		<div class="panel-heading ">
+				<h3 id="transfer-showing-month"></h3>
+				<span class="earn-data text-success"> All Transfer Money : $<span id="all-transfer-money"></span> </span>		
+		</div>
+		<table class="table table-bordered table-condensed" id="transfer-list">
+			<thead>
+				<tr class=success>
+					<th class="td-time">Time</th>
+					<th class="td-account">Transfer Out</th>				
+					<th class="td-account">Account</th>
+					<th class="td-money">Money</th>
+					<th class="td-remark">Remark</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>					
+	</div>
+</div>
+<script src="public/js/tally/transfer.js"></script>

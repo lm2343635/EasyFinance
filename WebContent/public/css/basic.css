@@ -1,0 +1,163 @@
+
+#riLeft 
+{
+	margin-left: 25px;
+	width: 670px;
+	float: left;
+}
+
+#riRight 
+{
+	z-index: 15;
+	float: right;
+	width: 300px;
+	height:649px;
+	background-color: rgb(235,235,235);
+	border-radius:0 10px 10px 0;
+}
+
+#user-info
+{
+	border-bottom: 1px solid rgb(200,200,200);
+}
+
+#account-info
+{
+	border-bottom: 1px solid rgb(200,200,200);
+}
+
+#account-info table
+{
+	margin-bottom: 0;
+}
+
+#spend-earn
+{
+	height: 157px;
+}
+
+#simple-info
+{
+	height: 100px;
+}
+
+.info-box
+{
+	margin-top: 20px;
+	width: 650px;
+}
+
+#graph-area
+{
+	height: 320px;
+}
+
+.graph
+{
+	height: 310px;
+	width: 320px;
+	margin:0px;
+	float: left;
+}
+
+#spend-classification
+{
+	margin-right: 10px;
+}
+
+#basic 
+{
+	height: 650px;
+	background: rgb(250,250,250);
+	border: 1px rgb(200,200,200) solid;
+	border-radius:10px;
+}
+
+img,h3
+{
+	float: left;
+}
+
+h3
+{
+	margin-left: 10px;
+}
+
+.panel-heading
+{
+	height: 45px;
+}
+
+.panel-title
+{
+	margin-top: 4px;
+}
+
+.other-funtions-img
+{
+	margin: 0px 19px 0px 19px;
+	cursor: pointer;
+}
+
+.other-funtions-word
+{
+	text-align: center;
+}
+
+#other-functions table tbody tr td
+{
+	width: 100px;
+	padding: 6px;
+}
+
+
+#spend-earn-trend .panel-body,#spend-classification .panel-body
+{
+	padding: 0;
+}
+
+#graph-area .graph .panel-heading img
+{
+	margin-right: 4px;
+}
+
+.graph-no-data
+{
+	width: 85px;
+	margin: 100px auto;
+	display: none;
+}
+
+#upload-photo-progress
+{
+	margin: 10px 0;
+}
+
+#upload-photo-tip
+{
+	margin-top: 7px;
+}
+
+#user-info button
+{
+	width: 260px;
+	margin: 0 20px 20px 20px;
+}
+
+#user-info img
+{
+	width: 260px;
+	height:166px;
+	margin: 20px;
+	cursor: pointer;
+}
+
+#uploaded-photo-panel
+{
+	display: none;
+}
+
+#uploaded-photo
+{
+	margin-left: 135px;
+}

@@ -1,0 +1,72 @@
+<link rel="stylesheet" href="public/css/tally.css">	
+<script type="text/javascript" src="public/js/tally/tally.js"></script>
+<div	id="add-record">
+	<div id="add-record-top">
+		<ul class="nav nav-pills" id="add-record-nav">
+			<li class="active"><a href="#"><span class="glyphicon glyphicon-minus-sign add-record-sign"></span>Spend</a></li>
+			<li><a href="#"><span class="glyphicon glyphicon-plus-sign add-record-sign"></span>Earn</a></li>
+			<li><a href="#"><span class="glyphicon glyphicon-share add-record-sign"></span>Transfer</a></li>		
+		</ul>
+		<span class="glyphicon glyphicon glyphicon-chevron-up add-record-sign" id="add-display"></span>
+	</div>
+	<div id="add-record-content">
+		<div class="showInfo" id="addSpend"></div>
+		<div class="showInfo" id="addEarn"></div>
+		<div class="showInfo" id="addTransfer"></div>				
+	</div>
+</div>
+<div class="panel panel-success"  id="tally-list">
+	<div class="panel-heading">
+		<img src="public/images/tally-list.png">
+		<span>Tally List</span>
+		<div class="btn-group" id="tally-list-type">
+			<button id="show-record" type="button" class="btn btn-success">Show Record</button>
+			<button id="show-transfer" type="button" class="btn btn-default">Show Transfer</button>
+		</div>	
+	</div>
+	<div id="record-panel" class="panel-body"></div>
+	<div id="transfer-panel" class="panel-body"></div>
+</div>
+<div class="modal fade" id="upload-record-photo-modal" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header modal-header-warning">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Choose Record Photo</h4>
+			</div>
+			<div class="modal-body">
+				<div id="modal-body-upload">
+					<h4 class="text-success">Upload Photo</h4><hr>
+				    <span class="btn btn-success fileinput-button">
+				        <i class="glyphicon glyphicon-plus"></i>
+				        <span>Select your record photo</span>
+				        <input id="upload-record-photo" type="file" name="files[]" multiple>
+				    </span>
+				    <span class="pull-right text-warning" id="upload-record-photo-tip">Only image files (JPG, GIF, PNG) are allowed.</span>
+					<div class="progress" id="upload-record-photo-progress">
+					    <div class="progress-bar progress-bar-striped active"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+					</div>
+					<div class="panel panel-default" id="uploaded-record-photo-panel">
+					    <div class="panel-body">
+					    	<img id="uploaded-record-photo" class="img-thumbnail"/>
+					    </div>
+					</div>	
+				</div>
+						<div id="modal-body-choose">
+							<h4 class="text-info">Choose a photo as your record photo</h4><hr>
+							<table>
+								
+							</table>
+						</div>
+						<input type="hidden" id="pid" value="2"/>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-info pull-left" id="choose-from-album">Choose from your Album</button>
+				<button type="button" class="btn btn-info pull-left" id="back-to-upload">Back to upload</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>	
+				<button type="button" class="btn btn-warning" id="upload-record-photo-reset">Reset</button>		
+				<button type="button" class="btn btn-success" id="save-record-photo">Save</button>	
+			</div>
+		</div>
+	</div>
+</div>

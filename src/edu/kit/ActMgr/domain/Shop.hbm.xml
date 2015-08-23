@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="edu.kit.ActMgr.domain">
+	<class name="Shop" table="shop">
+		<id name="sid" type="integer" column="sid">
+			<generator class="identity"/>
+		</id>
+		<property name="sname" column="sname" type="string" not-null="true" length="50" />
+		<property name="sin" column="sin" type="double"/>
+		<property name="sout" column="sout" type="double"/>
+		<many-to-one name="sicon"  class="Icon" column="iid" lazy="false"/>
+		<many-to-one name="accountBook" class="AccountBook" column="abid" not-null="true" lazy="false"/>
+		<property name="sync" column="sync" type="integer" not-null="true"/>
+	</class>
+</hibernate-mapping>

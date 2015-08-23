@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="edu.kit.ActMgr.domain">
+	<class name="Record" table="record">
+		<id name="rid" type="integer" column="rid">
+			<generator class="identity"/>
+		</id>
+		<many-to-one name="account" class="Account" cascade="all" column="aid" not-null="true" lazy="false"/>
+		<many-to-one name="classification" class="Classification" cascade="all" column="cid" not-null="true" lazy="false"/>
+		<many-to-one name="shop" class="Shop" cascade="all" column="sid" not-null="true" lazy="false"/>
+		<property name="money" column="money" type="double" not-null="true"/>
+		<property name="time" column="time" type="java.util.Date" not-null="true"/>
+		<many-to-one name="photo" column="pid" class="Photo" cascade="all" not-null="true" lazy="false"/>
+		<property name="remark" column="remark" type="string" />
+		<many-to-one name="accountBook" cascade="all" class="AccountBook" column="abid" not-null="true" lazy="false"/>
+		<property name="sync" column="sync" type="integer" not-null="true"/>
+	</class>
+</hibernate-mapping>

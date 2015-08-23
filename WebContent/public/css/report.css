@@ -1,0 +1,63 @@
+.list-group
+{
+	width: 240px;
+	float: left;
+	margin-right: 8px;
+}
+
+.showInfo
+{
+	width: 760px;
+	margin-bottom:0px;
+	float: left;
+	display: none;
+}
+
+.select-time
+{
+	float: left;
+	margin-right: 5px;
+}
+
+.select-time-sbt
+{
+	float: right;
+}
+
+.form_datetime
+{
+	width: 150px;
+}
+
+.alert
+{
+	height: 65px;
+}
+
+.alert span
+{
+	padding-top: 7px;
+}
+
+#choose-show-type
+{
+	float: right;
+	margin: 0;
+	margin-top: -4px;
+}
+
+.stats-hide
+{
+	display: none;
+}
+
+#report-list-group a img 
+{
+	margin-right: 5px;
+}
+
+#account-report-pie-in,#account-report-pie-out
+{
+	float: left;
+	width: 364px;
+}

@@ -1,0 +1,81 @@
+<div class="panel-heading">
+	<span class="show-title">Shop Report</span>
+	<ul class="pagination" id="choose-show-type">
+		 <li class="active stats-chart-pie-out-li">
+			 <a href="javascript:void(0)" title="Show as Pie Chart of Spend" onclick="changeShowType('stats-chart-pie-out')">
+			 	<span class="glyphicon glyphicon glyphicon-log-out" ></span>
+			 </a>
+		 </li>
+		 <li class="stats-chart-pie-in-li">
+			 <a href="javascript:void(0)" title="Show as Pie Chart of Earn" onclick="changeShowType('stats-chart-pie-in')">
+			 	<span class="glyphicon glyphicon glyphicon-log-in" ></span>
+			 </a>
+		 </li>
+		 <li class="stats-chart-column-li">
+			 <a href="javascript:void(0)" title="Show as Colum Chart" onclick="changeShowType('stats-chart-column')">
+			 	<span class="glyphicon glyphicon-stats" ></span>
+			 </a>
+		 </li>
+		 <li class="stats-table-li">
+			 <a href="javascript:void(0)" title="Show as Table" onclick="changeShowType('stats-table')">
+				 <span class="glyphicon glyphicon-list-alt"></span>
+			 </a>
+		 </li>
+	</ul>
+</div>
+<div class="panel-body">
+	<nav class="navbar navbar-default">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">Show All</a>
+		</div>
+		<div class="collapse navbar-collapse" >
+			<ul class="nav navbar-nav">
+				<li class="dropdown"  id="choose-type">
+					<a href="#" class="active dropdown-toggle" data-toggle="dropdown"><span>By Day</span><b class="caret"></b></a>
+					<input type="hidden" id="type" value="0">
+					<ul class="dropdown-menu">
+						<li><a href="javascript:void(0)" onclick="changeType(0,'checking-start-time','checking-end-time')">By Day</a></li>
+						<li><a href="javascript:void(0)" onclick="changeType(1,'checking-start-time','checking-end-time')">By Month</a></li>
+						<li><a href="javascript:void(0)" onclick="changeType(2,'checking-start-time','checking-end-time')">By Year</a></li>
+					</ul>
+				</li>
+			</ul>	
+		</div>
+	</nav>
+	<div class="stats-chart-pie-out" id="shop-stats-chart-pie-out"></div>
+	<div class="stats-chart-pie-in stats-hide" id="shop-stats-chart-pie-in"></div>
+	<div class="stats-chart-column stats-hide" id="shop-report-column"></div>
+	<div class="stats-table panel panel-default stats-hide">
+		<div class="panel-heading">Table data of Shop</div>
+		<table class="table table-hover" id="shop-report-table">
+			<thead>
+				<tr>
+					<th>Time</th>
+					<th>Earn</th>
+					<th>Spend</th>
+					<th>Surplus</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</div>
+	<div class="alert alert-default">
+		<span class="select-time">Select Time : </span>
+		<span class="select-time">Form</span>
+		<span class="start-time">
+			<input id="shop-start-time" type="text" readonly class="inputs form_datetime form-control select-time shop-select-time"  placeholder="Start Time">
+		</span>
+		<span class="select-time">To</span>
+		<span class="end-time">
+			<input id="shop-end-time" type="text" readonly class="inputs form_datetime form-control select-time shop-select-time"  placeholder="End Time">
+		</span>
+		<span id="shop-time-empty" style="display: none;">
+			<span class="glyphicon glyphicon-remove text-danger" 
+				data-toggle="popover" data-placement="right" 
+				data-content="Select start time and end time! " data-original-title="">
+			</span>
+		</span>
+		<button class="btn btn-primary select-time-sbt" id="shop-report-sbt">Submit</button>
+	</div>
+</div>
+<script src="public/js/report/shopReport.js"></script>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 指定Spring配置文件的Schema信息 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+	<bean id="userDao" class="edu.kit.ActMgr.dao.impl.UserDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="accountBookDao" class="edu.kit.ActMgr.dao.impl.AccountBookDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="classificationDao" class="edu.kit.ActMgr.dao.impl.ClassificationDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="shopDao" class="edu.kit.ActMgr.dao.impl.ShopDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="accountDao" class="edu.kit.ActMgr.dao.impl.AccountDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="templateDao" class="edu.kit.ActMgr.dao.impl.TemplateDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="recordDao" class="edu.kit.ActMgr.dao.impl.RecordDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="transferDao" class="edu.kit.ActMgr.dao.impl.TransferDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="iconDao" class="edu.kit.ActMgr.dao.impl.IconDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="photoDao" class="edu.kit.ActMgr.dao.impl.PhotoDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="accountHistoryDao" class="edu.kit.ActMgr.dao.impl.AccountHistoryDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+		<bean id="synchronizationHistoryDao" class="edu.kit.ActMgr.dao.impl.SynchronizationHistoryDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+</beans>
