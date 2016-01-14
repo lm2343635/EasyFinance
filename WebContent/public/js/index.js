@@ -35,7 +35,13 @@ $(document).ready(function(){
 		});
 	});
 	
-	$("#login-submit").click(function(){
+	$("body").keydown(function() {
+		if (event.keyCode==13) {
+			$("#login-submit").click();
+		}
+	});
+	
+	$("#login-submit").click(function() {
 		var email=$("#login-email").val();
 		var password=$("#login-password").val();
 		if($("#login-email-exist").is(":visible")&&password!=""&&password!=null)
@@ -145,10 +151,6 @@ $(document).ready(function(){
 		$("#load-other-functions").load("otherFunctions/exchangeRate.html");
 	});
 	
-//	$(window).resize(function(){
-//		var loginTop=(screenHeight-$("#login-form").height())/2;
-//		$("#login-form").css("top",loginTop+"px");
-//	});
 });
 
 function previous()
