@@ -59,7 +59,7 @@
 	display: none;
 }
 
-#this-year-history,#this-month-history,#last-decade-history
+#last-year-history, #last-month-history, #last-decade-history
 {
 	margin-left: 5px;
 }

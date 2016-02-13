@@ -113,11 +113,13 @@ $(document).ready(function(){
 		case "last-decade-history":
 			start=nextDay(-10*365);
 			break;
-		case "this-year-history":
-			start=getThisYearStart();
+		//查询近一年的汇率
+		case "last-year-history":
+			start=nextDay(-365);
 			break;
-		case "this-month-history":
-			start=getThisMonthStart();
+		//查询进一月的汇率
+		case "last-month-history":
+			start=nextDay(-30);
 			break;
 		default:
 			break;
@@ -234,9 +236,11 @@ function showChart(from,to)
 	$("#chart-full-screen-btn").show();
 	$("#from").val(from);
 	$("#to").val(to);
-	$("#exchange-start-time").val(getThisYearStart());
-	$("#exchange-end-time").val(getNowDate());
-	loadRateHistoryChart(from,to,getThisYearStart(),getNowDate());
+	var start=nextDay(-365);
+	var end=getNowDate();
+	$("#exchange-start-time").val(start);
+	$("#exchange-end-time").val(end);
+	loadRateHistoryChart(from, to, start, end);
 	$("#exchange-rate-chart").show("normal");
 }
 

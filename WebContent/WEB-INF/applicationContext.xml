@@ -20,7 +20,7 @@
 		p:driverClass="com.mysql.jdbc.Driver"
 		p:jdbcUrl="jdbc:mysql://127.0.0.1:3306/easyfinance?characterEncoding=utf-8"    
 		p:user="root"
-		p:password="123456"
+		p:password=""
 		p:maxPoolSize="40"
 		p:minPoolSize="1"
 		p:initialPoolSize="1"
