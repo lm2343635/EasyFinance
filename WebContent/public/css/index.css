@@ -1,96 +1,81 @@
-body 
-{
+body {
 	padding: 0;
 	margin: 0;
 }
 
-#carousel-example-generic
-{
+#carousel-example-generic {
 	position: absolute;
+	width: 100%;
+	height: 100%
 }
 
-#login-form
-{
+#login-form {
 	position: absolute;
 	opacity:0;
 	z-index: 10;
 	width: 500px;
 }
 
-.opacity
-{
+.opacity {
 	position: absolute;
 	background-color:white;
 	opacity:0.4;
 }
 
-.opacity-content
-{
+.opacity-content {
 	position: absolute;
 	width: 1008px;	
 }
 
-#head
-{
+#head {
 	width: 100%;
 	height: 100px;
 }
 
-#foot
-{
+#foot {
 	width: 100%;
 	height: 30px;
 	bottom: 0;
 }
 
-.input-group
-{
+.input-group {
 	margin-bottom: 5px;
 }
 
-.glyphicon-tips
-{
+.glyphicon-tips {
 	display: none;
 }
 
-#register-success,#create-account-book,#not-set-account-book
-{
+#register-success,#create-account-book,#not-set-account-book {
 	display: none;
 }
 
-.img-thumbnail
-{
+.img-thumbnail {
 	cursor: pointer;
 }
 
-.img-selected,.img-thumbnail:hover
-{
+.img-selected,.img-thumbnail:hover {
 	background-color: #cecece;
 }
 
-#foot-info
-{
+#foot-info {
 	bottom: 0;
 }
 
-#foot-info span
-{
+#foot-info span {
 	color: white;
 }
 
-#search-exchange-rate
-{
+#search-exchange-rate {
 	margin-bottom: 3px;
 }
 
-#search-exchange-rate:hover
-{
+#search-exchange-rate:hover {
 	cursor: pointer;
 	color: #cccccc;
 }
 
-.carousel-inner .item img
-{
+.carousel-inner .item img {
 	height: 100%;
 	width: 100%
 }
